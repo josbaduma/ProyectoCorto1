@@ -30,8 +30,8 @@ reg [1:0] countNext;
 //Contador para el divisor de frecuencia
 always @(posedge clk or posedge rst)
 begin
-	count <= countNext;
-	if(rst) count <= 0;
+	if(rst == 1) begin count[1:0] <= 0; end
+	else begin count <= countNext; end
 end
 
 always @(count)

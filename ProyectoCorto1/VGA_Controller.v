@@ -24,7 +24,8 @@ module VGA_Controller(
 	 input [1:0] inRGB,
     output reg HSync,
     output reg VSync,
-    output [2:0] RGB
+    output [2:0] RGB,
+	 output reg [9:0] HCount, VCount
     );
 
 //Dimensiones de la pantalla
@@ -41,21 +42,27 @@ localparam V_Back = 33;
 localparam H_Retrace = 96;
 localparam V_Retrace = 2;
 
+//Parametros para la comparacion en los contadores
+localparam HSR = (H_size + H_Back);
+localparam HSBR = (H_size + H_Back + H_Retrace - 1);
+localparam VSR = (V_size + V_Back);
+localparam VSBR = (V_size + V_Back + V_Retrace - 1);
+
 //Variables del contador
-reg [9:0] HCount, VCount;
+//reg [9:0] HCount, VCount;
 reg [9:0] HCountNext, VCountNext;
 
 //Parametros locales para la señal de salida
-reg State, StateNext;
+reg [1:0] State, StateNext;
 
 //Estados de la señal
 assign HEnd = (HCount == (H_size + H_Front + H_Back + H_Retrace - 1)); //Verifica contador Horizontal
 assign VEnd = (VCount == (V_size + V_Front + V_Back + V_Retrace - 1));//Verifica contador Vertical
 
 //Sincronizacion de señales
-always @(posedge clk or negedge rst)
+always @(posedge clk)
 begin
-	if(rst == 0 || HEnd || VEnd)
+	if(rst == 1)
 	begin
 		HCount <= 0;
 		VCount <= 0;
@@ -67,34 +74,63 @@ begin
 end
 
 //Contadores vertical y horizontal
-always @(HCount)
-	HCountNext <= HCount + 1;
+always @(*)
+begin
+	if(HEnd) HCountNext = 0;
+	else HCountNext <= HCount + 1;
+end
 	
-always @(VCount)
-	VCountNext <= VCount + 1;
+always @(*)
+begin
+	if(HEnd) begin
+		if(VEnd) VCountNext = 0;
+		else VCountNext <= VCount + 1;
+	end
+	else VCountNext <= VCount;
+end
 
 //Cambios de estado en la maquina
-always @(State)
+always @(State, HCount, VCount)
 begin
 	case(State)
-		0: if((HCount <= (H_size + H_Back) && HCount >= (H_size + H_Back + H_Retrace - 1)) &&
-				(VCount <= (V_size + V_Back) && VCount >= (V_size + V_Back + V_Retrace - 1)))
-				StateNext = 0;				
-		1: if((HCount >= (H_size + H_Back) && HCount <= (H_size + H_Back + H_Retrace - 1)) &&
-				(VCount <= (V_size + V_Back) && VCount >= (V_size + V_Back + V_Retrace - 1)))
-				StateNext = 1;
-		2: if((HCount <= (H_size + H_Back) && HCount >= (H_size + H_Back + H_Retrace - 1)) &&
-				(VCount >= (V_size + V_Back) && VCount <= (V_size + V_Back + V_Retrace - 1)))
-				StateNext = 2;
-		3: if((HCount >= (H_size + H_Back) && HCount <= (H_size + H_Back + H_Retrace - 1)) &&
-				(VCount >= (V_size + V_Back) && VCount <= (V_size + V_Back + V_Retrace - 1)))
-			StateNext = 3;
-		default: StateNext = 0;
+		2'b00: 	if((HCount >= HSR && HCount <= HSBR) && (VCount < VSR || VCount > VSBR))
+						StateNext = 2'b01;
+					else if((HCount < HSR || HCount > HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b10;
+					else if((HCount >= HSR && HCount <= HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b11;
+					else StateNext = 2'b00;			
+			
+		2'b01: 	if((HCount >= HSR && HCount <= HSBR) && (VCount < VSR || VCount > VSBR))
+						StateNext = 2'b01;
+					else if((HCount < HSR || HCount > HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b10;
+					else if((HCount >= HSR && HCount <= HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b11;
+					else StateNext = 2'b00;	
+			
+		2'b10: 	if((HCount >= HSR && HCount <= HSBR) && (VCount < VSR || VCount > VSBR))
+						StateNext = 2'b01;
+					else if((HCount < HSR || HCount > HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b10;
+					else if((HCount >= HSR && HCount <= HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b11;
+					else StateNext = 2'b00;	
+			
+		2'b11:	if((HCount >= HSR && HCount <= HSBR) && (VCount < VSR || VCount > VSBR))
+						StateNext = 2'b01;
+					else if((HCount < HSR || HCount > HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b10;
+					else if((HCount >= HSR && HCount <= HSBR) && (VCount >= VSR && VCount <= VSBR))
+						StateNext = 2'b11;
+					else StateNext = 2'b00;	
+			
+		default: StateNext = 2'b00;
 	endcase
 end
 
 //
-always @(posedge clk or posedge rst) begin
+always @(negedge clk or posedge rst) begin
 	if (rst == 1) State = 0;
 	else begin State = StateNext; end
 end

@@ -21,14 +21,16 @@
 module CoreModule(
     input clk,
     input rst,
-	 input wire [1:0] inRGB
+	 input wire [1:0] inRGB,
+	 output HSync, 
+	 output VSync,
+	 output wire RGB
     );
 	 
 	 
 	 wire PixelCLK;
 	 wire HSync;
 	 wire VSync;
-	 wire RGB;
 	
 	FreqDivisor divisor (
 		.clk(clk), 

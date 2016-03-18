@@ -33,15 +33,18 @@ module VGA_Controller_Test;
 	wire HSync;
 	wire VSync;
 	wire [2:0] RGB;
+	wire [9:0] HCount, VCount;
 
 	// Instantiate the Unit Under Test (UUT)
 	VGA_Controller uut (
-		.clk(clk), 
+		.clk(clk),
 		.rst(rst), 
-		.inRGB(inRGB), 
+		.inRGB(inRGB),
 		.HSync(HSync), 
 		.VSync(VSync), 
-		.RGB(RGB)
+		.RGB(RGB),
+		.HCount(HCount),
+		.VCount(VCount)
 	);
 
 	initial begin
@@ -71,5 +74,6 @@ module VGA_Controller_Test;
 		clk <= 1;
 		#20;
 	end
+	
 endmodule
 
