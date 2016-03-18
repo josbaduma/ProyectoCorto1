@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    23:58:43 03/16/2016 
+// Create Date:    16:09:53 03/17/2016 
 // Design Name: 
-// Module Name:    FreqDivisor 
+// Module Name:    CoreModule 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,26 +18,31 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module FreqDivisor(
+module CoreModule(
     input clk,
-	 input rst,
-    output PixelCLK
+    input rst,
+	 input wire [1:0] inRGB
     );
-
-reg [1:0] count;
-reg [1:0] countNext;
-
-//Contador para el divisor de frecuencia
-always @(posedge clk or posedge rst)
-begin
-	count <= countNext;
-	if(rst) count <= 0;
-end
-
-always @(count)
-	countNext <= count + 1;
-
-//Asigna el valor logico del clk de 25MHz
-assign PixelCLK = (count[1:0] == 2'b11);
-
+	 
+	 
+	 wire PixelCLK;
+	 wire HSync;
+	 wire VSync;
+	 wire RGB;
+	
+	FreqDivisor divisor (
+		.clk(clk), 
+		.rst(rst),
+		.PixelCLK(PixelCLK)
+	);
+	
+	VGA_Controller vga (
+		.clk(PixelCLK), 
+		.rst(rst), 
+		.inRGB(inRGB), 
+		.HSync(HSync), 
+		.VSync(VSync), 
+		.RGB(RGB)
+	);
+	
 endmodule

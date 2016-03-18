@@ -4,15 +4,15 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   00:02:08 03/17/2016
-// Design Name:   FreqDivisor
-// Module Name:   C:/XilinxProjects/ProyectoCorto1/FreqDivisor_Test.v
+// Create Date:   12:41:52 03/17/2016
+// Design Name:   VGA_Controller
+// Module Name:   C:/XilinxProjects/ProyectoCorto1/VGA_Controller_Test.v
 // Project Name:  ProyectoCorto1
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: FreqDivisor
+// Verilog Test Fixture created by ISE for module: VGA_Controller
 //
 // Dependencies:
 // 
@@ -22,25 +22,33 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module FreqDivisor_Test;
+module VGA_Controller_Test;
 
 	// Inputs
 	reg clk;
 	reg rst;
+	reg [1:0] inRGB;
 
 	// Outputs
-	wire PixelCLK;
+	wire HSync;
+	wire VSync;
+	wire [2:0] RGB;
 
 	// Instantiate the Unit Under Test (UUT)
-	FreqDivisor uut (
+	VGA_Controller uut (
 		.clk(clk), 
-		.rst(rst),
-		.PixelCLK(PixelCLK)
+		.rst(rst), 
+		.inRGB(inRGB), 
+		.HSync(HSync), 
+		.VSync(VSync), 
+		.RGB(RGB)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
+		rst = 0;
+		inRGB = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -50,14 +58,18 @@ module FreqDivisor_Test;
 			#5; rst = 1;
 		@(posedge clk);
 			#5; rst = 0;
+			
+		#50; inRGB = 2'b00;
+		#50; inRGB = 2'b01;
+		#50; inRGB = 2'b10;
+		#50; inRGB = 2'b11;
 	end
-	
+   
 	always begin
 		clk <= 0;
-		#5;
+		#20;
 		clk <= 1;
-		#5;
+		#20;
 	end
-      
 endmodule
 
