@@ -24,8 +24,7 @@ module VGA_Controller(
 	 input [1:0] inRGB,
     output reg HSync,
     output reg VSync,
-    output [2:0] RGB,
-	 output reg [9:0] HCount, VCount
+    output [2:0] RGB
     );
 
 //Dimensiones de la pantalla
@@ -49,7 +48,7 @@ localparam VSR = (V_size + V_Back);
 localparam VSBR = (V_size + V_Back + V_Retrace - 1);
 
 //Variables del contador
-//reg [9:0] HCount, VCount;
+reg [9:0] HCount, VCount;
 reg [9:0] HCountNext, VCountNext;
 
 //Parametros locales para la señal de salida
@@ -76,14 +75,14 @@ end
 //Contadores vertical y horizontal
 always @(*)
 begin
-	if(HEnd) HCountNext = 0;
+	if(HEnd) HCountNext <= 0;
 	else HCountNext <= HCount + 1;
 end
 	
 always @(*)
 begin
 	if(HEnd) begin
-		if(VEnd) VCountNext = 0;
+		if(VEnd) VCountNext <= 0;
 		else VCountNext <= VCount + 1;
 	end
 	else VCountNext <= VCount;

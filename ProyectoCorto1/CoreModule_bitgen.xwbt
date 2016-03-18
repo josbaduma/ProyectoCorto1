@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\XilinxProjects\ProyectoCorto1\CoreModule.ncd
+OUTFILE=C:\XilinxProjects\ProyectoCorto1\CoreModule.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\XilinxProjects\ProyectoCorto1
+LICENSE=WebPack
+USER_INFO=211154129_0_0_718
