@@ -1,0 +1,9 @@
+NET "clk" LOC = V10;
+NET "rst" LOC = C9;
+NET "inRGB[0]" LOC = T5;
+NET "inRGB[1]" LOC = V8;
+NET "HSync" LOC = N6;
+NET "VSync" LOC = P7;
+NET "RGB[0]" LOC = U7;
+NET "RGB[1]" LOC = P8;
+NET "RGB[2]" LOC = R7;

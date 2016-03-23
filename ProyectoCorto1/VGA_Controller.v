@@ -21,10 +21,8 @@
 module VGA_Controller(
     input clk,
     input rst,
-	 input [1:0] inRGB,
     output reg HSync,
-    output reg VSync,
-    output [2:0] RGB
+    output reg VSync
     );
 
 //Dimensiones de la pantalla
@@ -58,7 +56,7 @@ reg [1:0] State, StateNext;
 assign HEnd = (HCount == (H_size + H_Front + H_Back + H_Retrace - 1)); //Verifica contador Horizontal
 assign VEnd = (VCount == (V_size + V_Front + V_Back + V_Retrace - 1));//Verifica contador Vertical
 
-//Sincronizacion de señales
+//Sincronizacion de contadores
 always @(posedge clk)
 begin
 	if(rst == 1)
@@ -128,23 +126,18 @@ begin
 	endcase
 end
 
-//
+//Sincronizacion de estados
 always @(negedge clk or posedge rst) begin
 	if (rst == 1) State = 0;
 	else begin State = StateNext; end
 end
 
-//Señales de salida
+//Señales de salida y actualizacion de estados
 always @(State) begin
 	if(State == 0) begin HSync = 0; VSync = 0; end
 	else if(State == 1) begin HSync = 1; VSync = 0; end
 	else if(State == 2) begin HSync = 0; VSync = 1; end
 	else if(State == 3) begin HSync = 1; VSync = 1; end
 end
-	
-//Asignacion de colores
-assign RGB[0] = 1;
-assign RGB[1] = inRGB[0];
-assign RGB[2] = inRGB[1];
 
 endmodule 
