@@ -21,6 +21,8 @@
 module VGA_Controller(
     input clk,
     input rst,
+	 output reg [9:0] HCount,
+	 output reg [9:0] VCount,
     output reg HSync,
     output reg VSync
     );
@@ -46,7 +48,6 @@ localparam VSR = (V_size + V_Back);
 localparam VSBR = (V_size + V_Back + V_Retrace - 1);
 
 //Variables del contador
-reg [9:0] HCount, VCount;
 reg [9:0] HCountNext, VCountNext;
 
 //Parametros locales para la señal de salida
@@ -57,9 +58,9 @@ assign HEnd = (HCount == (H_size + H_Front + H_Back + H_Retrace - 1)); //Verific
 assign VEnd = (VCount == (V_size + V_Front + V_Back + V_Retrace - 1));//Verifica contador Vertical
 
 //Sincronizacion de contadores
-always @(posedge clk)
+always @(posedge clk, posedge rst)
 begin
-	if(rst == 1)
+	if(rst)
 	begin
 		HCount <= 0;
 		VCount <= 0;

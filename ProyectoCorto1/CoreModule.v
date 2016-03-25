@@ -21,14 +21,15 @@
 module CoreModule(
     input clk,
     input rst,
-	 input wire [1:0] inrgb,
 	 output wire HSync, 
 	 output wire VSync,
 	 output wire [2:0] rgb
     );
-	 	 
-	 wire PixelCLK;
-	 reg [2:0] rgb_reg;
+	
+	wire [9:0] HCount;
+	wire [9:0] VCount;
+	reg [2:0] rgb_reg;
+	wire [2:0] rgbNext;
 	
 	FreqDivisor divisor (
 		.clk(clk), 
@@ -39,22 +40,20 @@ module CoreModule(
 	VGA_Controller vga (
 		.clk(PixelCLK), 
 		.rst(rst),
+		.HCount(HCount),
+		.VCount(VCount),
 		.HSync(HSync), 
 		.VSync(VSync)
 	);
 	
-	always @(posedge clk, posedge rst)
-	begin
-		if(rst)
-			rgb_reg = 0;
-		else
-		begin
-			//Asignacion de colores
-			rgb_reg[0] = 1;
-			rgb_reg[1] = inrgb[0];
-			rgb_reg[2] = inrgb[1];
-		end
-	end
+	DrawFigures circle (
+		.HCount(HCount),
+		.VCount(VCount),
+		.rgb(rgbNext)
+	);
 	
+	always @(posedge PixelCLK)
+		rgb_reg <= rgbNext;
+		
 	assign rgb = rgb_reg;
 endmodule
