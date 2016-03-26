@@ -37,7 +37,7 @@ module CoreModule(
 		.PixelCLK(PixelCLK)
 	);
 	
-	VGA_Controller vga (
+	VGA_Controller vga_sync (
 		.clk(PixelCLK), 
 		.rst(rst),
 		.HCount(HCount),
@@ -46,7 +46,7 @@ module CoreModule(
 		.VSync(VSync)
 	);
 	
-	DrawFigures circle (
+	DrawFigures draw_system (
 		.HCount(HCount),
 		.VCount(VCount),
 		.rgb(rgbNext)
