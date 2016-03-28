@@ -56,4 +56,5 @@ module CoreModule(
 		rgb_reg <= rgbNext;
 		
 	assign rgb = rgb_reg;
+	
 endmodule

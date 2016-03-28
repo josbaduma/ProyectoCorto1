@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/XilinxProjects/ProyectoCorto1/CoreModule_Test_isim_beh.exe" -prj "C:/XilinxProjects/ProyectoCorto1/CoreModule_Test_beh.prj" "work.CoreModule_Test" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/XilinxProjects/ProyectoCorto1/rgbtest_isim_beh.exe" -prj "C:/XilinxProjects/ProyectoCorto1/rgbtest_beh.prj" "work.rgbtest" "work.glbl" 
