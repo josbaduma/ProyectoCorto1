@@ -21,17 +21,18 @@
 module object_diamond(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input diamond_select,
     output diamond_on
     );
 
 ///-------------Parametros del rombo------------//
 localparam diamond_width = 200;
-localparam diamond_height = 150;
+localparam diamond_height = 145;
 
-localparam diamond_x_l = 430;
+localparam diamond_x_l = 434;
 localparam diamond_x_r = diamond_x_l + diamond_width - 1;
 
-localparam diamond_y_t = 165;
+localparam diamond_y_t = 172;
 localparam diamond_y_b = diamond_y_t + diamond_height - 1;
 
 assign diamond_sq = ((diamond_x_l <= HCount) && (HCount <= diamond_x_r) &&

@@ -21,17 +21,18 @@
 module object_star(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input star_select,
     output star_on
     );
 
 ///-------------Parametros de la estrella ------------//
 localparam star_width = 200;
-localparam star_height = 150;
+localparam star_height = 145;
 
-localparam star_x_l = 430;
+localparam star_x_l = 434;
 localparam star_x_r = star_x_l + star_width - 1;
 
-localparam star_y_t = 325;
+localparam star_y_t = 318;
 localparam star_y_b = star_y_t + star_height - 1;
 
 assign star_sq = ((star_x_l <= HCount) && (HCount <= star_x_r) &&

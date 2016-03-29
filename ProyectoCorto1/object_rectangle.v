@@ -21,6 +21,7 @@
 module object_rectangle(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input rectangle_select,
     output rectangle_on
     );
 

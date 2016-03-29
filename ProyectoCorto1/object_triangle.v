@@ -21,17 +21,18 @@
 module object_triangle(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input triangle_select,
     output triangle_on
     );
 
 ///-------------Parametros del triangulo------------//
 localparam triangle_width = 200;
-localparam triangle_height = 150;
+localparam triangle_height = 145;
 
-localparam triangle_x_l = 430;
+localparam triangle_x_l = 434;
 localparam triangle_x_r = triangle_x_l + triangle_width - 1;
 
-localparam triangle_y_t = 5;
+localparam triangle_y_t = 6;
 localparam triangle_y_b = triangle_y_t + triangle_height - 1;
 
 assign triangle_sq = ((triangle_x_l <= HCount) && (HCount <= triangle_x_r) &&

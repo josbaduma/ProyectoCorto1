@@ -21,17 +21,18 @@
 module object_pentagon(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input pentagon_select,
     output pentagon_on
     );
 
 ///-------------Parametros del pentagono------------//
 localparam pentagon_width = 200;
-localparam pentagon_height = 150;
+localparam pentagon_height = 145;
 
 localparam pentagon_x_l = 220;
 localparam pentagon_x_r = pentagon_x_l + pentagon_width - 1;
 
-localparam pentagon_y_t = 325;
+localparam pentagon_y_t = 318;
 localparam pentagon_y_b = pentagon_y_t + pentagon_height - 1;
 
 assign pentagon_sq = ((pentagon_x_l <= HCount) && (HCount <= pentagon_x_r) &&

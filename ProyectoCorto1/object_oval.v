@@ -21,16 +21,17 @@
 module object_oval(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input oval_select,
     output oval_on
     );
 
 localparam oval_width = 200;
-localparam oval_height = 150;
+localparam oval_height = 145;
 
-localparam oval_x_l = 5;
+localparam oval_x_l = 6;
 localparam oval_x_r = oval_x_l + oval_width - 1;
 
-localparam oval_y_t = 165;
+localparam oval_y_t = 172;
 localparam oval_y_b = oval_y_t + oval_height - 1;
 
 assign oval_sq = ((oval_x_l <= HCount) && (HCount <= oval_x_r) &&

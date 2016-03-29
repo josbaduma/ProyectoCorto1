@@ -21,16 +21,17 @@
 module object_circle(
     input [9:0] HCount,
     input [9:0] VCount,
-    output circle_on
+	 input circle_select,
+    output reg circle_on
     );
 
 localparam circle_width = 200;
-localparam circle_height = 150;
+localparam circle_height = 145;
 
-localparam circle_x_l = 5;
+localparam circle_x_l = 6;
 localparam circle_x_r = circle_x_l + circle_width - 1;
 
-localparam circle_y_t = 5;
+localparam circle_y_t = 26;
 localparam circle_y_b = circle_y_t + circle_height - 1;
 
 assign circle_sq = ((circle_x_l <= HCount) && (HCount <= circle_x_r) &&
@@ -50,6 +51,21 @@ assign circle_addr = VCount[9:0] - circle_y_t[9:0];
 assign circle_col = HCount[9:0] - circle_x_l[9:0];
 
 assign circle_bit = circle_data[circle_col];
-assign circle_on = circle_sq & circle_bit;
+//assign circle_on = circle_sq & circle_bit;
+
+//Bordes del selector
+assign bordeSelecA = ((4 <= HCount) && (HCount <= 211) && (3 <= VCount) && (VCount <= 4));
+assign bordeSelecB = ((4 <= HCount) && (HCount <= 211) && (156 <= VCount) && (VCount <= 157));
+assign bordeSelecC = ((4 <= HCount) && (HCount <= 5) && (3 <= VCount) && (VCount <= 157));
+assign bordeSelecD = ((210 <= HCount) && (HCount <= 211) && (3 <= VCount) && (VCount <= 157));
+
+assign bordeSelec_on = (bordeSelecA || bordeSelecB || bordeSelecC || bordeSelecD);
+
+always @* begin
+	case(circle_select)
+		1'b0: circle_on <= circle_sq & circle_bit;
+		1'b1: circle_on <= circle_sq & circle_bit || bordeSelec_on;
+	endcase
+end
 
 endmodule

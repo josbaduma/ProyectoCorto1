@@ -21,6 +21,7 @@
 module object_square(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input square_select,
     output square_on
     );
 
