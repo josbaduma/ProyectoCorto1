@@ -42,6 +42,7 @@ object_circle circle (
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.circle_select(circle_select),
+	.completeScreen(completeScreen),
 	.circle_on(circle_on));
 	
 object_square square ( 
