@@ -22,18 +22,16 @@ module object_triangle(
     input [9:0] HCount,
     input [9:0] VCount,
 	 input triangle_select,
-    output triangle_on
+	 input full_screen,
+    output reg triangle_on
     );
 
 ///-------------Parametros del triangulo------------//
 localparam triangle_width = 200;
 localparam triangle_height = 145;
 
-localparam triangle_x_l = 434;
-localparam triangle_x_r = triangle_x_l + triangle_width - 1;
-
-localparam triangle_y_t = 6;
-localparam triangle_y_b = triangle_y_t + triangle_height - 1;
+reg [9:0] triangle_x_l, triangle_x_r;
+reg [9:0] triangle_y_t, triangle_y_b;
 
 assign triangle_sq = ((triangle_x_l <= HCount) && (HCount <= triangle_x_r) &&
 							(triangle_y_t <= VCount) && (VCount <= triangle_y_b));
@@ -52,6 +50,23 @@ assign triangle_addr = VCount[9:0] - triangle_y_t[9:0];
 assign triangle_col = HCount[9:0] - triangle_x_l[9:0];
 
 assign triangle_bit = triangle_data[triangle_col];
-assign triangle_on = triangle_sq & triangle_bit;
+
+//Sincronizacion de los registros y verificadores de variable
+always @* begin
+	if(triangle_select && full_screen) begin
+		triangle_x_l <= 9'd220;
+		triangle_y_t <= 9'd172;
+		triangle_on <= triangle_sq & triangle_bit;
+	end
+	else if (triangle_select == 0 && full_screen)
+		triangle_on <= 1'b0;
+	else begin
+		triangle_x_l <= 9'd434;
+		triangle_y_t <= 9'd26;
+		triangle_on <= triangle_sq & triangle_bit;
+	end
+	triangle_x_r <= (triangle_x_l + triangle_width - 1);
+	triangle_y_b <= (triangle_y_t + triangle_height - 1);
+end
 
 endmodule

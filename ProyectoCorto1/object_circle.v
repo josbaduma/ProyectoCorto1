@@ -22,7 +22,7 @@ module object_circle(
     input [9:0] HCount,
     input [9:0] VCount,
 	 input circle_select,
-	 input completeScreen,
+	 input full_screen,
     output reg circle_on
     );
 
@@ -31,7 +31,7 @@ localparam circle_height = 145;
 
 reg [9:0] circle_x_l, circle_x_r;
 
-reg [9:0] circle_y_t = 26, circle_y_b;
+reg [9:0] circle_y_t, circle_y_b;
 
 assign circle_sq = ((circle_x_l <= HCount) && (HCount <= circle_x_r) &&
 							(circle_y_t <= VCount) && (VCount <= circle_y_b));
@@ -51,22 +51,14 @@ assign circle_col = HCount[9:0] - circle_x_l[9:0];
 
 assign circle_bit = circle_data[circle_col];
 
-//Bordes del selector
-//assign bordeSelecA = ((4 <= HCount) && (HCount <= 211) && (3 <= VCount) && (VCount <= 4));
-//assign bordeSelecB = ((4 <= HCount) && (HCount <= 211) && (156 <= VCount) && (VCount <= 157));
-//assign bordeSelecC = ((4 <= HCount) && (HCount <= 5) && (3 <= VCount) && (VCount <= 157));
-//assign bordeSelecD = ((210 <= HCount) && (HCount <= 211) && (3 <= VCount) && (VCount <= 157));
-//
-//assign bordeSelec_on = (bordeSelecA || bordeSelecB || bordeSelecC || bordeSelecD);
-
 //Sincronizacion de los registros y verificadores de variable
 always @* begin
-	if(circle_select && completeScreen) begin
+	if(circle_select && full_screen) begin
 		circle_x_l <= 9'd214;
 		circle_y_t <= 9'd172;
 		circle_on <= circle_sq & circle_bit;
 	end
-	else if (circle_select == 0 && completeScreen)
+	else if (circle_select == 0 && full_screen)
 		circle_on <= 1'b0;
 	else begin
 		circle_x_l <= 9'd6;

@@ -22,18 +22,16 @@ module object_star(
     input [9:0] HCount,
     input [9:0] VCount,
 	 input star_select,
-    output star_on
+	 input full_screen,
+    output reg star_on
     );
 
 ///-------------Parametros de la estrella ------------//
 localparam star_width = 200;
 localparam star_height = 145;
 
-localparam star_x_l = 434;
-localparam star_x_r = star_x_l + star_width - 1;
-
-localparam star_y_t = 318;
-localparam star_y_b = star_y_t + star_height - 1;
+reg [9:0] star_x_l, star_x_r;
+reg [9:0] star_y_t, star_y_b;
 
 assign star_sq = ((star_x_l <= HCount) && (HCount <= star_x_r) &&
 							(star_y_t <= VCount) && (VCount <= star_y_b));
@@ -52,6 +50,23 @@ assign star_addr = VCount[9:0] - star_y_t[9:0];
 assign star_col = HCount[9:0] - star_x_l[9:0];
 
 assign star_bit = star_data[star_col];
-assign star_on = star_sq & star_bit;
+
+//Sincronizacion de los registros y verificadores de variable
+always @* begin
+	if(star_select && full_screen) begin
+		star_x_l <= 9'd214;
+		star_y_t <= 9'd172;
+		star_on <= star_sq & star_bit;
+	end
+	else if (star_select == 0 && full_screen)
+		star_on <= 1'b0;
+	else begin
+		star_x_l <= 9'd434;
+		star_y_t <= 9'd318;
+		star_on <= star_sq & star_bit;
+	end
+	star_x_r <= (star_x_l + star_width - 1);
+	star_y_b <= (star_y_t + star_height - 1);
+end
 
 endmodule

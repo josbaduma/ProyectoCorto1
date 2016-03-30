@@ -30,7 +30,7 @@ module DrawFigures(
 	 input hexagon_select,
 	 input pentagon_select,
 	 input star_select,
-	 input completeScreen,
+	 input full_screen,
     output reg [2:0] rgb
     );
 
@@ -42,7 +42,7 @@ object_circle circle (
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.circle_select(circle_select),
-	.completeScreen(completeScreen),
+	.full_screen(full_screen),
 	.circle_on(circle_on));
 	
 object_square square ( 

@@ -22,18 +22,16 @@ module object_hexagon(
     input [9:0] HCount,
     input [9:0] VCount,
 	 input hexagon_select,
-    output hexagon_on
+	 input full_screen,
+    output reg hexagon_on
     );
 
 ///-------------Parametros del hexagono------------//
 localparam hexagon_width = 200;
 localparam hexagon_height = 145;
 
-localparam hexagon_x_l = 6;
-localparam hexagon_x_r = hexagon_x_l + hexagon_width - 1;
-
-localparam hexagon_y_t = 318;
-localparam hexagon_y_b = hexagon_y_t + hexagon_height - 1;
+reg [9:0] hexagon_x_l, hexagon_x_r;
+reg [9:0] hexagon_y_t, hexagon_y_b;
 
 assign hexagon_sq = ((hexagon_x_l <= HCount) && (HCount <= hexagon_x_r) &&
 							(hexagon_y_t <= VCount) && (VCount <= hexagon_y_b));
@@ -52,6 +50,23 @@ assign hexagon_addr = VCount[9:0] - hexagon_y_t[9:0];
 assign hexagon_col = HCount[9:0] - hexagon_x_l[9:0];
 
 assign hexagon_bit = hexagon_data[hexagon_col];
-assign hexagon_on = hexagon_sq & hexagon_bit;
+
+//Sincronizacion de los registros y verificadores de variable
+always @* begin
+	if(hexagon_select && full_screen) begin
+		hexagon_x_l <= 9'd214;
+		hexagon_y_t <= 9'd172;
+		hexagon_on <= hexagon_sq & hexagon_bit;
+	end
+	else if (hexagon_select == 0 && full_screen)
+		hexagon_on <= 1'b0;
+	else begin
+		hexagon_x_l <= 9'd6;
+		hexagon_y_t <= 9'd318;
+		hexagon_on <= hexagon_sq & hexagon_bit;
+	end
+	hexagon_x_r <= (hexagon_x_l + hexagon_width - 1);
+	hexagon_y_b <= (hexagon_y_t + hexagon_height - 1);
+end
 
 endmodule

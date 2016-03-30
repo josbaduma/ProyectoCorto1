@@ -21,10 +21,10 @@
 module CoreModule(
     input clk,
     input rst,
-	 input Arriba0,
-    input Abajo0,
-    input Izquierda0,
-    input Derecha0,
+	 input up0,
+    input down0,
+    input left0,
+    input right0,
     input Select0,
 	 output wire HSync, 
 	 output wire VSync,
@@ -37,7 +37,7 @@ module CoreModule(
 	wire [2:0] rgbNext;
 	
 	//Variables internas
-	wire Arriba,Abajo,Izquierda,Derecha, circulo,cuadrado,triangulo,ovalo,rectangulo,rombo,hexagono,pentagono,estrella,enter;
+	wire up, down, left, right, circle, square, triangle, oval, rectangle, diamond, hexagon, pentagon, star, enter;
 	
 	FreqDivisor divisor (
 		.clk(clk), 
@@ -57,27 +57,27 @@ module CoreModule(
 	DrawFigures draw_system (
 		.HCount(HCount),
 		.VCount(VCount),
-		.circle_select(circulo),
-		.square_select(cuadrado),
-		.triangle_select(triangulo),
-		.oval_select(ovalo),
-		.rectangle_select(rectangulo),
-		.diamond_select(rombo),
-		.hexagon_select(hexagono),
-		.pentagon_select(pentagono),
-		.star_select(estrella),
-		.completeScreen(enter),
+		.circle_select(circle),
+		.square_select(square),
+		.triangle_select(triangle),
+		.oval_select(oval),
+		.rectangle_select(rectangle),
+		.diamond_select(diamond),
+		.hexagon_select(hexagon),
+		.pentagon_select(pentagon),
+		.star_select(star),
+		.full_screen(enter),
 		.rgb(rgbNext)
 	);
 	
 	//Code
-	Filtro f1(Arriba0,clk,Arriba);
-	Filtro f2(Abajo0,clk,Abajo);
-	Filtro f3(Izquierda0,clk,Izquierda);
-	Filtro f4(Derecha0,clk,Derecha);
-	Filtro f5(Select0,clk,Select);
-	SelectorDeImagenes sel (Izquierda,Derecha,Arriba,Abajo,Select, clk, circulo,cuadrado,triangulo,ovalo,rectangulo,
-									rombo,hexagono,pentagono,estrella,enter);
+	Filtro f1(up0,clk,up);
+	Filtro f2(down0,clk,down);
+	Filtro f3(left0,clk,left);
+	Filtro f4(right0,clk,right);
+	Filtro f5(select0,clk,select);
+	SelectorDeImagenes sel (left, right, up, down, select, clk, circulo, square, triangle, oval, rectangle,
+									diamond, hexagon, pentagon, star, enter);
 	
 	always @(posedge PixelCLK)
 		rgb_reg <= rgbNext;
