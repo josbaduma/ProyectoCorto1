@@ -37,7 +37,7 @@ module CoreModule(
 	wire [2:0] rgbNext;
 	
 	//Variables internas
-	wire up, down, left, right, circle, square, triangle, oval, rectangle, diamond, hexagon, pentagon, star, enter;
+	wire up, down, left, right, select, circle, square, triangle, oval, rectangle, diamond, hexagon, pentagon, star, enter;
 	
 	FreqDivisor divisor (
 		.clk(clk), 
