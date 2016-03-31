@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2016-03-31T10:40:45</DateModified>
   <ModuleName>CoreModule</ModuleName>
   <SummaryTimeStamp>2016-03-31T09:46:30</SummaryTimeStamp>
   <SavedFilePath>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1/iseconfig/CoreModule.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1\</ImplementationReportsDirectory>
+=======
+  <DateModified>2016-03-31T10:07:09</DateModified>
+  <ModuleName>CoreModule</ModuleName>
+  <SummaryTimeStamp>2016-03-31T08:21:54</SummaryTimeStamp>
+  <SavedFilePath>C:/XilinxProjects/ProyectoCorto1/iseconfig/CoreModule.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/XilinxProjects/ProyectoCorto1\</ImplementationReportsDirectory>
+>>>>>>> 0df03646fbdee778acf8a735e4ee760cf27541f7
   <DateInitialized>2016-03-17T18:15:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

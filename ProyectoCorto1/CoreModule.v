@@ -25,7 +25,7 @@ module CoreModule(
     input down0,
     input left0,
     input right0,
-    input Select0,
+    input select0,
 	 output wire HSync, 
 	 output wire VSync,
 	 output wire [2:0] rgb
@@ -76,7 +76,7 @@ module CoreModule(
 	Filtro f3(left0,clk,left);
 	Filtro f4(right0,clk,right);
 	Filtro f5(select0,clk,select);
-	SelectorDeImagenes sel (left, right, up, down, select, clk, circulo, square, triangle, oval, rectangle,
+	SelectorDeImagenes sel (left, right, up, down, select, clk, circle, square, triangle, oval, rectangle,
 									diamond, hexagon, pentagon, star, enter);
 	
 	always @(posedge PixelCLK)
