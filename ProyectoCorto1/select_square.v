@@ -36,14 +36,19 @@ module select_square(
 //internal var
 reg [11:0] regV,regH;
 //param
-localparam posx = 208;
-localparam posy = 154;
+localparam posx = 214;
+localparam posy = 146;
 //Code
 always@ *
 begin 
 if(enter == 1)
 begin
   regH = 800;
+  regV = 0;
+end
+else if(circulo == 1)
+begin
+  regH = 0;
   regV = 0;
 end
 else if(cuadrado == 1)
@@ -89,10 +94,10 @@ end
 end
 
 //Bordes del selector
-assign bordeSelecA = ((4 + regH <= HCount) && (HCount <= 211 + regH ) && (3 + regV <= VCount) && (VCount <= 4 + regV ));
-assign bordeSelecB = ((4 + regH <= HCount) && (HCount <= 211 + regH ) && (156 + regV <= VCount) && (VCount <= 157 + regV ));
-assign bordeSelecC = ((4 + regH <= HCount) && (HCount <= 5 + regH ) && (3 + regV <= VCount) && (VCount <= 157 + regV ));
-assign bordeSelecD = ((210 + regH <= HCount) && (HCount <= 211 + regH ) && (3 + regV <= VCount) && (VCount <= 157 + regV ));
+assign bordeSelecA = ((4 + regH <= HCount) && (HCount <= 209 + regH ) && (3 + regV <= VCount) && (VCount <= 4 + regV ));
+assign bordeSelecB = ((4 + regH <= HCount) && (HCount <= 209 + regH ) && (142 + regV <= VCount) && (VCount <= 143 + regV ));
+assign bordeSelecC = ((4 + regH <= HCount) && (HCount <= 5 + regH ) && (3 + regV <= VCount) && (VCount <= 143 + regV ));
+assign bordeSelecD = ((208 + regH <= HCount) && (HCount <= 209 + regH ) && (3 + regV <= VCount) && (VCount <= 143 + regV ));
 
 assign bordeSelec_on = (bordeSelecA || bordeSelecB || bordeSelecC || bordeSelecD);
 
