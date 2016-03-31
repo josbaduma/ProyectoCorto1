@@ -102,7 +102,7 @@ assign bordeD = ((171 <= VCount) && (VCount <= 172));
 assign bordeE = ((316 <= VCount) && (VCount <= 317));
 assign bordeF = ((461 <= VCount) && (VCount <= 462));
 
-assign borde_on = (bordeA || bordeB || bordeC || bordeD);
+assign borde_on = (bordeA || bordeB || bordeC || bordeD || bordeE || bordeF);
 							  
 //------------Selector de los colores------------//
 always @*
