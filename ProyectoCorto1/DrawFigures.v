@@ -92,7 +92,7 @@ object_star star (
 	.VCount(VCount), 
 	.star_select(star_select),
 	.star_on(star_on));
-<<<<<<< HEAD
+
 	
 select_square select (
    .HCount(HCount), 
@@ -108,13 +108,12 @@ select_square select (
 	.estrella(star_select),
 	.enter(full_screen),
 	.bordeSelec_on(bordeSelec_on ));
-=======
+
 
 object_text txt (
 	.HCount(HCount),
 	.VCount(VCount),
 	.text_on(text_on));
->>>>>>> origin/master
 							  
 //------------Parametros de los bordes-----------//
 

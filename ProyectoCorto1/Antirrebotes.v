@@ -40,17 +40,14 @@ case(state)
 		    next_state = 0;
 		end
 	 1:begin
-	    actCuenta = 1;
-		 boton = 1;
-	    if(t300ms == 1)
-		    next_state = 2;
-		 else
-		    next_state = 1;
-		end
-	 2:begin
 	    actCuenta = 0;
 		 boton = 1;
-	    if(boton0 == 0)
+		 next_state = 2;
+		end
+	 2:begin
+	    actCuenta = 1;
+		 boton = 0;
+	    if(t300ms == 1)
           next_state = 0;
        else 
           next_state = 2;
@@ -58,5 +55,5 @@ case(state)
     default:next_state = 0;
 endcase	 
 end
-always@(posedge Clk) state <= next_state;
+always@(negedge Clk) state <= next_state;
 endmodule
