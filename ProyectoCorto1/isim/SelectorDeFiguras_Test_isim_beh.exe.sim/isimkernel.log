@@ -2,9 +2,9 @@ Command line:
    SelectorDeFiguras_Test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49223
+     -socket  49344
 
-Thu Mar 31 10:26:25 2016
+Thu Mar 31 11:14:16 2016
 
 
- Elaboration Time: 0.0625 sec
+ Elaboration Time: 0.03125 sec

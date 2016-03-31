@@ -247,6 +247,8 @@ case(state)
 		   enter = 1;
            if(Select == 1)
                next_state = 0;
+			  else 
+			      next_state = 9;
            end			  
          10:begin
 			cuadrado = 1;
@@ -261,6 +263,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 1;
+			  else
+			      next_state = 10;
            end	
 			11:begin
 			triangulo = 1;
@@ -275,6 +279,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 2;
+			  else
+               next_state = 11;			  
            end	
 			12:begin
 			ovalo = 1;
@@ -289,6 +295,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 3;
+			  else
+               next_state = 12;
            end
          13:begin
 			rectangulo = 1;
@@ -303,6 +311,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 4;
+				else
+               next_state = 13;
            end
          14:begin
 			rombo = 1;
@@ -317,6 +327,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 5;
+				else
+               next_state = 14;
            end
          15:begin
 			hexagono = 1;
@@ -331,6 +343,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 6;
+					else
+               next_state = 15;
            end	
          16:begin
 			pentagono = 1;
@@ -345,6 +359,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 7;
+					else
+               next_state = 16;
            end
          17:begin
 			estrella = 1;
@@ -359,6 +375,8 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 8;
+				else
+               next_state = 17;
            end
          default:next_state = 0;
 endcase
