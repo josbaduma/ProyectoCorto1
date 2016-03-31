@@ -38,7 +38,7 @@ assign pentagon_sq = ((pentagon_x_l <= HCount) && (HCount <= pentagon_x_r) &&
 
 wire [7:0] pentagon_addr;
 wire [7:0] pentagon_col;
-wire [207:0] pentagon_data;
+wire [199:0] pentagon_data;
 
 //Memoria ROM que contiene mapa de bit del pentagono
 ROM_Pentagon pentagon (
@@ -61,8 +61,8 @@ always @* begin
 	else if (pentagon_select == 0 && full_screen)
 		pentagon_on <= 1'b0;
 	else begin
-		pentagon_x_l <= 9'd318;
-		pentagon_y_t <= 9'd220;
+		pentagon_x_l <= 9'd220;
+		pentagon_y_t <= 9'd318;
 		pentagon_on <= pentagon_sq & pentagon_bit;
 	end
 	pentagon_x_r <= (pentagon_x_l + pentagon_width - 1);

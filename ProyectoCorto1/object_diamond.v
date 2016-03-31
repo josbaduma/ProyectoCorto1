@@ -38,7 +38,7 @@ assign diamond_sq = ((diamond_x_l <= HCount) && (HCount <= diamond_x_r) &&
 
 wire [7:0] diamond_addr;
 wire [7:0] diamond_col;
-wire [207:0] diamond_data;
+wire [199:0] diamond_data;
 
 //Memoria ROM que contiene mapa de bit del rombo
 ROM_Diamond diamond (

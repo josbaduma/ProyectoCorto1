@@ -38,7 +38,7 @@ assign triangle_sq = ((triangle_x_l <= HCount) && (HCount <= triangle_x_r) &&
 
 wire [7:0] triangle_addr;
 wire [7:0] triangle_col;
-wire [207:0] triangle_data;
+wire [199:0] triangle_data;
 
 //Memoria ROM que contiene mapa de bit del triangulo
 ROM_Triangle triangle (

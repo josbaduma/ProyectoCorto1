@@ -35,7 +35,7 @@ module DrawFigures(
     );
 
 wire circle_on, square_on, triangle_on, oval_on, rectangle_on;
-wire diamond_on, pentagon_on, hexagon_on, star_on;
+wire diamond_on, pentagon_on, hexagon_on, star_on, text_on;
 
 //------Modulos para cada objeto que se dibuja -------//
 object_circle circle ( 
@@ -92,6 +92,7 @@ object_star star (
 	.VCount(VCount), 
 	.star_select(star_select),
 	.star_on(star_on));
+<<<<<<< HEAD
 	
 select_square select (
    .HCount(HCount), 
@@ -107,6 +108,13 @@ select_square select (
 	.estrella(star_select),
 	.enter(full_screen),
 	.bordeSelec_on(bordeSelec_on ));
+=======
+
+object_text txt (
+	.HCount(HCount),
+	.VCount(VCount),
+	.text_on(text_on));
+>>>>>>> origin/master
 							  
 //------------Parametros de los bordes-----------//
 
@@ -117,13 +125,13 @@ assign bordeD = ((171 <= VCount) && (VCount <= 172));
 assign bordeE = ((316 <= VCount) && (VCount <= 317));
 assign bordeF = ((461 <= VCount) && (VCount <= 462));
 
-assign borde_on = (bordeA || bordeB || bordeC || bordeD);
+assign borde_on = (bordeA || bordeB || bordeC || bordeD || bordeE || bordeF);
 							  
 //------------Selector de los colores------------//
 always @*
 begin
 	if( circle_on || square_on || triangle_on || oval_on || rectangle_on ||
-		 diamond_on || pentagon_on || hexagon_on || star_on )
+		 diamond_on || pentagon_on || hexagon_on || star_on || text_on )
 		rgb <= 3'b001;
 	else if(bordeSelec_on)
 	   rgb <= 3'b100;
