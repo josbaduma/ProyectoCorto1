@@ -94,10 +94,10 @@ end
 end
 
 //Bordes del selector
-assign bordeSelecA = ((4 + regH <= HCount) && (HCount <= 209 + regH ) && (3 + regV <= VCount) && (VCount <= 4 + regV ));
-assign bordeSelecB = ((4 + regH <= HCount) && (HCount <= 209 + regH ) && (142 + regV <= VCount) && (VCount <= 143 + regV ));
-assign bordeSelecC = ((4 + regH <= HCount) && (HCount <= 5 + regH ) && (3 + regV <= VCount) && (VCount <= 143 + regV ));
-assign bordeSelecD = ((208 + regH <= HCount) && (HCount <= 209 + regH ) && (3 + regV <= VCount) && (VCount <= 143 + regV ));
+assign bordeSelecA = ((4 + regH <= HCount) && (HCount <= 209 + regH ) && (28 + regV <= VCount) && (VCount <= 29 + regV ));
+assign bordeSelecB = ((4 + regH <= HCount) && (HCount <= 209 + regH ) && (167 + regV <= VCount) && (VCount <= 168 + regV ));
+assign bordeSelecC = ((4 + regH <= HCount) && (HCount <= 5 + regH ) && (28 + regV <= VCount) && (VCount <= 168 + regV ));
+assign bordeSelecD = ((208 + regH <= HCount) && (HCount <= 209 + regH ) && (28 + regV <= VCount) && (VCount <= 168 + regV ));
 
 assign bordeSelec_on = (bordeSelecA || bordeSelecB || bordeSelecC || bordeSelecD);
 
