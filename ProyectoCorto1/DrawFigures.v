@@ -92,6 +92,21 @@ object_star star (
 	.VCount(VCount), 
 	.star_select(star_select),
 	.star_on(star_on));
+	
+select_square select (
+   .HCount(HCount), 
+	.VCount(VCount),
+	.circulo(circle_select),
+	.cuadrado(square_select),
+	.triangulo(triangle_select),
+	.ovalo(oval_select),
+	.rectangulo(rectangle_select),
+   .rombo(diamond_select),
+	.hexagono(hexagon_select),
+	.pentagono(pentagon_select),
+	.estrella(star_select),
+	.enter(full_screen),
+	.bordeSelec_on(bordeSelec_on ));
 							  
 //------------Parametros de los bordes-----------//
 
@@ -110,6 +125,8 @@ begin
 	if( circle_on || square_on || triangle_on || oval_on || rectangle_on ||
 		 diamond_on || pentagon_on || hexagon_on || star_on )
 		rgb <= 3'b001;
+	else if(bordeSelec_on)
+	   rgb <= 3'b100;
 	else begin
 		if(borde_on)
 			rgb <=3'b110;

@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    19:28:26 03/29/2016 
+// Create Date:    19:40:49 03/30/2016 
 // Design Name: 
 // Module Name:    select_square 
 // Project Name: 
@@ -42,32 +42,50 @@ localparam posy = 154;
 always@ *
 begin 
 if(enter == 1)
+begin
   regH = 800;
   regV = 0;
+end
 else if(cuadrado == 1)
+begin
   regH = posx;
   regV = 0;
+end
 else if(triangulo == 1)
+begin
   regH = posx + posx;
   regV = 0;
+end
 else if(ovalo == 1)
+begin
   regH = 0;
   regV = posy;
+end
 else if(rectangulo == 1)
+begin
   regH = posx;
   regV = posy;
+end
 else if(rombo == 1)
+begin
   regH = posx + posx;
   regV = posy;
+end
 else if(hexagono == 1)
+begin
   regH = 0;
   regV = posy + posy;
+end
 else if(pentagono == 1)
+begin
   regH = posx;
   regV = posy + posy;
+end
 else //estrella
+begin  
   regH = posx + posx;
   regV = posy + posy;
+end
 end
 
 //Bordes del selector
@@ -77,6 +95,5 @@ assign bordeSelecC = ((4 + regH <= HCount) && (HCount <= 5 + regH ) && (3 + regV
 assign bordeSelecD = ((210 + regH <= HCount) && (HCount <= 211 + regH ) && (3 + regV <= VCount) && (VCount <= 157 + regV ));
 
 assign bordeSelec_on = (bordeSelecA || bordeSelecB || bordeSelecC || bordeSelecD);
-
 
 endmodule
