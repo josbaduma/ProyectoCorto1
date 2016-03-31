@@ -28,7 +28,7 @@ wire t300ms, enableCount;
 //Code
 
     Antirrebotes anti (boton0,Clk,t300ms,enableCount,boton);
-	 Temporizador temp (enableCount,Clk,t300ms);
+	 Temporizador temp (Clk,enableCount,t300ms);
 
 
 endmodule
