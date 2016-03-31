@@ -38,7 +38,7 @@ assign pentagon_sq = ((pentagon_x_l <= HCount) && (HCount <= pentagon_x_r) &&
 
 wire [7:0] pentagon_addr;
 wire [7:0] pentagon_col;
-wire [207:0] pentagon_data;
+wire [199:0] pentagon_data;
 
 //Memoria ROM que contiene mapa de bit del pentagono
 ROM_Pentagon pentagon (

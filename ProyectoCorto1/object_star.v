@@ -38,7 +38,7 @@ assign star_sq = ((star_x_l <= HCount) && (HCount <= star_x_r) &&
 
 wire [7:0] star_addr;
 wire [7:0] star_col;
-wire [207:0] star_data;
+wire [199:0] star_data;
 
 //Memoria ROM que contiene mapa de bit de la estrella
 ROM_Star star (

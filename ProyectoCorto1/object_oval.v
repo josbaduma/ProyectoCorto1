@@ -37,7 +37,7 @@ assign oval_sq = ((oval_x_l <= HCount) && (HCount <= oval_x_r) &&
 
 wire [7:0] oval_addr;
 wire [7:0] oval_col;
-wire [207:0] oval_data;
+wire [199:0] oval_data;
 
 //Memoria ROM que contiene mapa de bit del triangulo
 ROM_Oval oval (

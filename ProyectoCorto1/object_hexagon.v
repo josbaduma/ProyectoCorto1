@@ -38,7 +38,7 @@ assign hexagon_sq = ((hexagon_x_l <= HCount) && (HCount <= hexagon_x_r) &&
 
 wire [7:0] hexagon_addr;
 wire [7:0] hexagon_col;
-wire [207:0] hexagon_data;
+wire [199:0] hexagon_data;
 
 //Memoria ROM que contiene mapa de bit del hexagono
 ROM_Hexagon hexagon (
