@@ -117,8 +117,8 @@ object_text txt (
 							  
 //------------Parametros de los bordes-----------//
 
-assign bordeA = ((212 <= HCount) && (HCount <= 214));
-assign bordeB = ((426 <= HCount) && (HCount <= 428));
+assign bordeA = ((212 <= HCount) && (HCount <= 214) && (26 <= VCount) && (VCount <= 465));
+assign bordeB = ((426 <= HCount) && (HCount <= 428) && (26 <= VCount) && (VCount <= 465));
 assign bordeC = ((25 <= VCount) && (VCount <= 26));
 assign bordeD = ((171 <= VCount) && (VCount <= 172));
 assign bordeE = ((316 <= VCount) && (VCount <= 317));
@@ -130,12 +130,12 @@ assign borde_on = (bordeA || bordeB || bordeC || bordeD || bordeE || bordeF);
 always @*
 begin
 	if( circle_on || square_on || triangle_on || oval_on || rectangle_on ||
-		 diamond_on || pentagon_on || hexagon_on || star_on || text_on )
+		 diamond_on || pentagon_on || hexagon_on || star_on )
 		rgb <= 3'b001;
 	else if(bordeSelec_on)
 	   rgb <= 3'b100;
 	else begin
-		if(borde_on)
+		if(borde_on || text_on )
 			rgb <=3'b110;
 		else
 			rgb <= 3'b000;
