@@ -1,0 +1,10 @@
+Command line:
+   SelectorDeFiguras_Test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49223
+
+Thu Mar 31 10:26:25 2016
+
+
+ Elaboration Time: 0.0625 sec

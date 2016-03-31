@@ -35,7 +35,7 @@ begin
 end
 always@(cont)
 begin
-   if(cont >= 2)//30000000)
+   if(cont >= 30000000)
       FinalCuenta<=1;
 	else
 	   FinalCuenta<=0;

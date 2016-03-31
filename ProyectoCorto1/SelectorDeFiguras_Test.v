@@ -77,30 +77,32 @@ module SelectorDeFiguras_Test;
 		#50;
         
 		// Add stimulus here
-      #50;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a cuadrado
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a triangulo
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 1;Select = 0;//va a rombo
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 1;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;//va aretan
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 1;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;//va a ovalo
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 1;Select = 0;//va a hexagono
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a pentagono
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
-		#50;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a estrellita
-		#50;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+      #30;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a cuadrado
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a triangulo
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 1;Select = 0;//va a rombo
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 1;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;//va aretan
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 1;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;//va a ovalo
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 1;Select = 0;//va a hexagono 
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a pentagono
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 0;Derecha = 1;Arriba = 0;Abajo = 0;Select = 0;//va a estrellita
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 1;
+		#20;Izquierda = 0;Derecha = 0;Arriba = 0;Abajo = 0;Select = 0;
 		
 	end
 always 
 begin
 	Clk <= 0;
-	#30;
+	#10;
 	Clk <= 1;
-	#30;
+	#10;
 end 
 endmodule
 
