@@ -35,7 +35,7 @@ module DrawFigures(
     );
 
 wire circle_on, square_on, triangle_on, oval_on, rectangle_on;
-wire diamond_on, pentagon_on, hexagon_on, star_on, text_on;
+wire diamond_on, pentagon_on, hexagon_on, star_on, text_top_on, text_bottom_on;
 
 //------Modulos para cada objeto que se dibuja -------//
 object_circle circle ( 
@@ -113,7 +113,17 @@ select_square select (
 object_text txt (
 	.HCount(HCount),
 	.VCount(VCount),
-	.text_on(text_on));
+	.circulo(circle_select),
+	.cuadrado(square_select),
+	.triangulo(triangle_select),
+	.ovalo(oval_select),
+	.rectangulo(rectangle_select),
+   .rombo(diamond_select),
+	.hexagono(hexagon_select),
+	.pentagono(pentagon_select),
+	.estrella(star_select),
+	.text_top_on(text_top_on),
+	.text_bottom_on(text_bottom_on));
 							  
 //------------Parametros de los bordes-----------//
 
@@ -135,7 +145,7 @@ begin
 	else if(bordeSelec_on)
 	   rgb <= 3'b100;
 	else begin
-		if(borde_on || text_on )
+		if( ( borde_on && ~full_screen ) || text_top_on || (text_bootom_on && ~full_screen ))
 			rgb <=3'b110;
 		else
 			rgb <= 3'b000;
