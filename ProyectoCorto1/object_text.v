@@ -56,7 +56,7 @@ ROM_Text text (
 assign text_top_addr = VCount[9:0] - text_top_y_t[9:0];
 assign text_top_col = HCount[9:0] - text_top_x_l[9:0];
 
-assign text_top_bit = text_top_data[text_top_col];
+assign text_top_bit = text_data[text_top_col];
 
 //Sincronizacion de los registros y verificadores de variable
 always @* begin
@@ -85,7 +85,7 @@ reg [3:0] fig_sel;
 assign text_bottom_addr = VCount[9:0] - text_bottom_y_t[9:0] + (fig_sel * 15) + 25;
 assign text_bottom_col = HCount[9:0] - text_bottom_x_l[9:0];
 
-assign text_bottom_bit = text_bottom_data[text_bottom_col];
+assign text_bottom_bit = text_data[text_bottom_col];
 
 //Sincronizacion de los registros y verificadores de variable
 always @* begin
