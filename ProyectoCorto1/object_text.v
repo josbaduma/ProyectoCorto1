@@ -46,17 +46,17 @@ assign text_top_sq = ((text_top_x_l <= HCount) && (HCount <= text_top_x_r) &&
 
 wire [7:0] text_top_addr;
 wire [7:0] text_top_col;
-wire [209:0] text_data;
+wire [209:0] text_top_data;
 
-ROM_Text text (
+ROM_TextTop text_top (
 	.addr(text_top_addr),
-	.data(text_data)
+	.data(text_top_data)
 );
 
 assign text_top_addr = VCount[9:0] - text_top_y_t[9:0];
 assign text_top_col = HCount[9:0] - text_top_x_l[9:0];
 
-assign text_top_bit = text_data[text_top_col];
+assign text_top_bit = text_top_data[text_top_col];
 
 //Sincronizacion de los registros y verificadores de variable
 always @* begin
@@ -80,12 +80,18 @@ assign text_bottom_sq = ((text_bottom_x_l <= HCount) && (HCount <= text_bottom_x
 
 wire [7:0] text_bottom_addr;
 wire [7:0] text_bottom_col;
-reg [3:0] fig_sel;
+wire [209:0] text_bottom_data;
+reg fig_sel;
 
-assign text_bottom_addr = VCount[9:0] - text_bottom_y_t[9:0] + (fig_sel * 15) + 25;
+ROM_TextBottom text_bottom (
+	.addr(text_bottom_addr),
+	.data(text_bottom_data)
+);
+
+assign text_bottom_addr = VCount[9:0] - text_bottom_y_t[9:0] + (fig_sel * 15);
 assign text_bottom_col = HCount[9:0] - text_bottom_x_l[9:0];
 
-assign text_bottom_bit = text_data[text_bottom_col];
+assign text_bottom_bit = text_bottom_data[text_bottom_col];
 
 //Sincronizacion de los registros y verificadores de variable
 always @* begin

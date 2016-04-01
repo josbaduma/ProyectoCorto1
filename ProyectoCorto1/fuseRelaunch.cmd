@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/XilinxProjects/ProyectoCorto1/square_test_isim_beh.exe" -prj "C:/XilinxProjects/ProyectoCorto1/square_test_beh.prj" "work.square_test" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/XilinxProjects/ProyectoCorto1/Text_test_isim_beh.exe" -prj "C:/XilinxProjects/ProyectoCorto1/Text_test_beh.prj" "work.Text_test" "work.glbl" 
