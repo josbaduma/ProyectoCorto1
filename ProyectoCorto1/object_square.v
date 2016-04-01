@@ -42,7 +42,7 @@ always @* begin
 		square_on <= ((square_x_l <= HCount) && (HCount <= square_x_r) &&
 							(square_y_t <= VCount) && (VCount <= square_y_b));
 	end
-	else if (square_select == 0 && full_screen)
+	else if ( ~square_select && full_screen)
 		square_on <= 1'b0;
 	else begin
 		square_x_l <= 9'd262;

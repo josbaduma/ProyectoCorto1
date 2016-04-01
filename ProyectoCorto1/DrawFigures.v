@@ -49,48 +49,56 @@ object_square square (
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.square_select(square_select),
+	.full_screen(full_screen),
 	.square_on(square_on));
 	
 object_triangle triangle ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.triangle_select(triangle_select),
+	.full_screen(full_screen),
 	.triangle_on(triangle_on));
 	
 object_oval oval ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.oval_select(oval_select),
+	.full_screen(full_screen),
 	.oval_on(oval_on));
 	
 object_rectangle rectangle ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.rectangle_select(rectangle_select),
+	.full_screen(full_screen),
 	.rectangle_on(rectangle_on));
 	
 object_diamond diamond ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.diamond_select(diamond_select),
+	.full_screen(full_screen),
 	.diamond_on(diamond_on));
 	
 object_pentagon pentagon ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.pentagon_select(pentagon_select),
+	.full_screen(full_screen),
 	.pentagon_on(pentagon_on));
 	
 object_hexagon hexagon ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.hexagon_select(hexagon_select),
+	.full_screen(full_screen),
 	.hexagon_on(hexagon_on));
 	
 object_star star ( 
 	.HCount(HCount), 
 	.VCount(VCount), 
 	.star_select(star_select),
+	.full_screen(full_screen),
 	.star_on(star_on));
 
 	

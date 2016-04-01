@@ -58,7 +58,7 @@ always @* begin
 		triangle_y_t <= 9'd172;
 		triangle_on <= triangle_sq & triangle_bit;
 	end
-	else if (triangle_select == 0 && full_screen)
+	else if ( ~triangle_select && full_screen)
 		triangle_on <= 1'b0;
 	else begin
 		triangle_x_l <= 9'd434;

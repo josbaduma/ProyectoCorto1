@@ -57,7 +57,7 @@ always @* begin
 		oval_y_t <= 9'd172;
 		oval_on <= oval_sq & oval_bit;
 	end
-	else if (oval_select == 0 && full_screen)
+	else if (~oval_select && full_screen)
 		oval_on <= 1'b0;
 	else begin
 		oval_x_l <= 9'd6;

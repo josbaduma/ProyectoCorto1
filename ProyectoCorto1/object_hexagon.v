@@ -22,7 +22,7 @@ module object_hexagon(
     input [9:0] HCount,
     input [9:0] VCount,
 	 input hexagon_select,
-	 input full_screen,
+	 input wire full_screen,
     output reg hexagon_on
     );
 
@@ -58,7 +58,7 @@ always @* begin
 		hexagon_y_t <= 9'd172;
 		hexagon_on <= hexagon_sq & hexagon_bit;
 	end
-	else if (hexagon_select == 0 && full_screen)
+	else if ( ~hexagon_select && full_screen)
 		hexagon_on <= 1'b0;
 	else begin
 		hexagon_x_l <= 9'd6;

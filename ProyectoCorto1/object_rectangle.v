@@ -42,7 +42,7 @@ always @* begin
 		rectangle_on <= ((rectangle_x_l <= HCount) && (HCount <= rectangle_x_r) &&
 							  (rectangle_y_t <= VCount) && (VCount <= rectangle_y_b));
 	end
-	else if (rectangle_select == 0 && full_screen)
+	else if ( ~rectangle_select && full_screen)
 		rectangle_on <= 1'b0;
 	else begin
 		rectangle_x_l <= 9'd240;

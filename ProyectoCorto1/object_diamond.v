@@ -58,7 +58,7 @@ always @* begin
 		diamond_y_t <= 9'd172;
 		diamond_on <= diamond_sq & diamond_bit;
 	end
-	else if (diamond_select == 0 && full_screen)
+	else if ( ~diamond_select && full_screen)
 		diamond_on <= 1'b0;
 	else begin
 		diamond_x_l <= 9'd434;

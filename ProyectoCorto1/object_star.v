@@ -58,7 +58,7 @@ always @* begin
 		star_y_t <= 9'd172;
 		star_on <= star_sq & star_bit;
 	end
-	else if (star_select == 0 && full_screen)
+	else if ( ~star_select && full_screen)
 		star_on <= 1'b0;
 	else begin
 		star_x_l <= 9'd434;

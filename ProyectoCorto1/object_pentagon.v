@@ -58,7 +58,7 @@ always @* begin
 		pentagon_y_t <= 9'd172;
 		pentagon_on <= pentagon_sq & pentagon_bit;
 	end
-	else if (pentagon_select == 0 && full_screen)
+	else if ( ~pentagon_select && full_screen)
 		pentagon_on <= 1'b0;
 	else begin
 		pentagon_x_l <= 9'd220;

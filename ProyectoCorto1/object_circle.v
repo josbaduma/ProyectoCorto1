@@ -58,7 +58,7 @@ always @* begin
 		circle_y_t <= 9'd172;
 		circle_on <= circle_sq & circle_bit;
 	end
-	else if (circle_select == 0 && full_screen)
+	else if ( ~circle_select && full_screen)
 		circle_on <= 1'b0;
 	else begin
 		circle_x_l <= 9'd6;
