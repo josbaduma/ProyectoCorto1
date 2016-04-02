@@ -135,12 +135,12 @@ object_text txt (
 							  
 //------------Parametros de los bordes-----------//
 
-assign bordeA = ((212 <= HCount) && (HCount <= 214) && (26 <= VCount) && (VCount <= 465));
-assign bordeB = ((426 <= HCount) && (HCount <= 428) && (26 <= VCount) && (VCount <= 465));
+assign bordeA = ((212 <= HCount) && (HCount <= 214) && (26 <= VCount) && (VCount <= 463));
+assign bordeB = ((426 <= HCount) && (HCount <= 428) && (26 <= VCount) && (VCount <= 463));
 assign bordeC = ((25 <= VCount) && (VCount <= 26));
 assign bordeD = ((171 <= VCount) && (VCount <= 172));
 assign bordeE = ((316 <= VCount) && (VCount <= 317));
-assign bordeF = ((461 <= VCount) && (VCount <= 462));
+assign bordeF = ((462 <= VCount) && (VCount <= 463));
 
 assign borde_on = (bordeA || bordeB || bordeC || bordeD || bordeE || bordeF);
 							  

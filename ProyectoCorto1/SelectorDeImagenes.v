@@ -247,10 +247,6 @@ case(state)
 		   enter = 1;
            if(Select == 1)
                next_state = 0;
-			  else if(Izquierda == 1)
-			      next_state = 17;
-			  else if(Derecha == 1)
-			      next_state = 10;
 			  else 
 			      next_state = 9;
            end			  
@@ -267,10 +263,6 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 1;
-			  else if(Izquierda == 1)
-			      next_state = 9;
-			  else if(Derecha == 1)
-			      next_state = 11;
 			  else
 			      next_state = 10;
            end	
@@ -287,10 +279,6 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 2;
-			  else if(Izquierda == 1)
-			      next_state = 10;
-			  else if(Derecha == 1)
-			      next_state = 12;
 			  else
                next_state = 11;			  
            end	
@@ -307,10 +295,6 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 3;
-			  else if(Izquierda == 1)
-			      next_state = 11;
-			  else if(Derecha == 1)
-			      next_state = 13;
 			  else
                next_state = 12;
            end
@@ -327,10 +311,6 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 4;
-				else if(Izquierda == 1)
-			      next_state = 12;
-			   else if(Derecha == 1)
-			      next_state = 14;
 				else
                next_state = 13;
            end
@@ -347,10 +327,6 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 5;
-				else if(Izquierda == 1)
-			      next_state = 13;
-			   else if(Derecha == 1)
-			      next_state = 15;
 				else
                next_state = 14;
            end
@@ -367,11 +343,7 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 6;
-				else if(Izquierda == 1)
-			      next_state = 14;
-		      else if(Derecha == 1)
-			      next_state = 16;
-				else
+					else
                next_state = 15;
            end	
          16:begin
@@ -387,11 +359,7 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 7;
-				else if(Izquierda == 1)
-			      next_state = 15;
-			   else if(Derecha == 1)
-			      next_state = 17;	
-				else
+					else
                next_state = 16;
            end
          17:begin
@@ -407,10 +375,6 @@ case(state)
 			enter = 1;
            if(Select == 1)
                next_state = 8;
-				else if(Izquierda == 1)
-			      next_state = 16;
-			   else if(Derecha == 1)
-			      next_state = 9;
 				else
                next_state = 17;
            end

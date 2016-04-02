@@ -7,7 +7,6 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures/circle - object_circle</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures/diamond - object_diamond</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures/hexagon - object_hexagon</ClosedNode>
@@ -33,13 +32,13 @@
          <ClosedNode>/rgbtest C:|XilinxProjects|ProyectoCorto1|rgbtest.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>CoreModule (C:/XilinxProjects/ProyectoCorto1/CoreModule.v)</SelectedItem>
+         <SelectedItem>txt - object_text (C:/XilinxProjects/ProyectoCorto1/object_text.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015b000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015b0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000170000000020000000000000000000000000200000064ffffffff000000810000000300000002000001700000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>CoreModule (C:/XilinxProjects/ProyectoCorto1/CoreModule.v)</CurrentItem>
+      <CurrentItem>txt - object_text (C:/XilinxProjects/ProyectoCorto1/object_text.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -83,22 +82,24 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode/>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/f1 - Filtro</ClosedNode>
@@ -126,6 +127,7 @@
          <ClosedNode>/SelectorDeFiguras_Test C:|XilinxProjects|ProyectoCorto1|SelectorDeFiguras_Test.v</ClosedNode>
          <ClosedNode>/SelectorDeImagenes_Test C:|XilinxProjects|ProyectoCorto1|SelectorDeImagenes_Test.v</ClosedNode>
          <ClosedNode>/Temporizador_test C:|XilinxProjects|ProyectoCorto1|Temporizador_test.v</ClosedNode>
+         <ClosedNode>/Text_test C:|XilinxProjects|ProyectoCorto1|Text_test.v</ClosedNode>
          <ClosedNode>/VGA_Controller_Test C:|XilinxProjects|ProyectoCorto1|VGA_Controller_Test.v</ClosedNode>
          <ClosedNode>/antirrebotes_test C:|XilinxProjects|ProyectoCorto1|antirrebotes_test.v</ClosedNode>
          <ClosedNode>/square_test C:|XilinxProjects|ProyectoCorto1|square_test.v</ClosedNode>
@@ -135,7 +137,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000162000000020000000000000000000000000200000064ffffffff000000810000000300000002000001620000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000089000000020000000000000000000000000200000064ffffffff000000810000000300000002000000890000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>Unassigned User Library Modules</CurrentItem>
    </ItemView>
@@ -145,13 +147,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
