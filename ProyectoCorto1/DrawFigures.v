@@ -121,6 +121,12 @@ select_square select (
 object_text txt (
 	.HCount(HCount),
 	.VCount(VCount),
+	.text_top_on(text_top_on));
+	
+	
+object_text_bottom txt_btn (
+	.HCount(HCount),
+	.VCount(VCount),
 	.circle_select(circle_select),
 	.square_select(square_select),
 	.triangle_select(triangle_select),
@@ -130,8 +136,22 @@ object_text txt (
 	.hexagon_select(hexagon_select),
 	.pentagon_select(pentagon_select),
 	.star_select(star_select),
-	.text_top_on(text_top_on),
 	.text_bottom_on(text_bottom_on));
+	
+
+object_text_figure txt_fig (
+	.HCount(HCount),
+	.VCount(VCount),
+	.circle_select(circle_select),
+	.square_select(square_select),
+	.triangle_select(triangle_select),
+	.oval_select(oval_select),
+	.rectangle_select(rectangle_select),
+   .diamond_select(diamond_select),
+	.hexagon_select(hexagon_select),
+	.pentagon_select(pentagon_select),
+	.star_select(star_select),
+	.text_figure_on(text_figure_on));
 							  
 //------------Parametros de los bordes-----------//
 
@@ -152,12 +172,12 @@ begin
 		rgb <= 3'b001;
 	else if(bordeSelec_on)
 	   rgb <= 3'b100;
-	else begin
-		if( ( borde_on && ~full_screen ) || text_top_on || (text_bottom_on && ~full_screen ))
-			rgb <=3'b110;
-		else
-			rgb <= 3'b000;
-	end
+	else if( ( borde_on && ~full_screen ) || text_top_on || (text_bottom_on && ~full_screen ))
+		rgb <=3'b110;
+	else if( text_figure_on && full_screen )
+		rgb <= 3'b011;
+	else
+		rgb <= 3'b000;
 end
 
 endmodule

@@ -27,8 +27,8 @@ module object_square(
     );
 
 ///-------------Parametros del cuadrado------------//
-localparam square_width = 115;
-localparam square_height = 115;
+localparam square_width = 110;
+localparam square_height = 110;
 
 reg [9:0] square_x_l, square_x_r;
 
@@ -37,16 +37,16 @@ reg [9:0] square_y_t, square_y_b;
 //Sincronizacion de los registros y verificadores de variable
 always @* begin
 	if(square_select && full_screen) begin
-		square_x_l <= 9'd262;
-		square_y_t <= 9'd178;
+		square_x_l <= 9'd264;
+		square_y_t <= 9'd182;
 		square_on <= ((square_x_l <= HCount) && (HCount <= square_x_r) &&
-							(square_y_t <= VCount) && (VCount <= square_y_b));
+						  (square_y_t <= VCount) && (VCount <= square_y_b));
 	end
 	else if ( ~square_select && full_screen)
 		square_on <= 1'b0;
 	else begin
-		square_x_l <= 9'd262;
-		square_y_t <= 9'd44;
+		square_x_l <= 9'd264;
+		square_y_t <= 9'd48;
 		square_on <= ((square_x_l <= HCount) && (HCount <= square_x_r) &&
 							(square_y_t <= VCount) && (VCount <= square_y_b));
 	end

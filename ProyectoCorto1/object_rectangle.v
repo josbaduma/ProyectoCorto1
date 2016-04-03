@@ -28,7 +28,7 @@ module object_rectangle(
 
 //------------Parametros del rectangulo-----------//
 localparam rectangle_width = 160;
-localparam rectangle_height = 115;
+localparam rectangle_height = 110;
 
 reg [9:0] rectangle_x_l, rectangle_x_r;
 
@@ -38,7 +38,7 @@ reg [9:0] rectangle_y_t, rectangle_y_b;
 always @* begin
 	if(rectangle_select && full_screen) begin
 		rectangle_x_l <= 9'd240;
-		rectangle_y_t <= 9'd178;
+		rectangle_y_t <= 9'd182;
 		rectangle_on <= ((rectangle_x_l <= HCount) && (HCount <= rectangle_x_r) &&
 							  (rectangle_y_t <= VCount) && (VCount <= rectangle_y_b));
 	end
@@ -46,7 +46,7 @@ always @* begin
 		rectangle_on <= 1'b0;
 	else begin
 		rectangle_x_l <= 9'd240;
-		rectangle_y_t <= 9'd178;
+		rectangle_y_t <= 9'd182;
 		rectangle_on <= ((rectangle_x_l <= HCount) && (HCount <= rectangle_x_r) &&
 							  (rectangle_y_t <= VCount) && (VCount <= rectangle_y_b));
 	end
