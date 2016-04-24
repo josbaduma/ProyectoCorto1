@@ -7,6 +7,7 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/CoreModule C:|Users|AndresMaria|Documents|Taller en Sistemas Digitales|Taller-Digital|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures/circle - object_circle</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/draw_system - DrawFigures/diamond - object_diamond</ClosedNode>
@@ -34,13 +35,13 @@
          <ClosedNode>/rgbtest C:|XilinxProjects|ProyectoCorto1|rgbtest.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>CoreModule (C:/XilinxProjects/ProyectoCorto1/CoreModule.v)</SelectedItem>
+         <SelectedItem>temp - Temporizador (C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1/Temporizador.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015b000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015b0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>CoreModule (C:/XilinxProjects/ProyectoCorto1/CoreModule.v)</CurrentItem>
+      <CurrentItem>temp - Temporizador (C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1/Temporizador.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -86,7 +87,6 @@
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
-         <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -94,7 +94,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -108,6 +108,7 @@
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/f3 - Filtro</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/f4 - Filtro</ClosedNode>
          <ClosedNode>/CoreModule C:|XilinxProjects|ProyectoCorto1|CoreModule.v/f5 - Filtro</ClosedNode>
+         <ClosedNode>/CoreModule_Test C:|Users|AndresMaria|Documents|Taller en Sistemas Digitales|Taller-Digital|ProyectoCorto1|CoreModule_Test.v</ClosedNode>
          <ClosedNode>/CoreModule_Test C:|XilinxProjects|ProyectoCorto1|CoreModule_Test.v</ClosedNode>
          <ClosedNode>/CoreModule_Test C:|XilinxProjects|ProyectoCorto1|CoreModule_Test.v/uut - CoreModule/draw_system - DrawFigures/circle - object_circle</ClosedNode>
          <ClosedNode>/CoreModule_Test C:|XilinxProjects|ProyectoCorto1|CoreModule_Test.v/uut - CoreModule/draw_system - DrawFigures/diamond - object_diamond</ClosedNode>
@@ -122,6 +123,7 @@
          <ClosedNode>/CoreModule_Test C:|XilinxProjects|ProyectoCorto1|CoreModule_Test.v/uut - CoreModule/f3 - Filtro</ClosedNode>
          <ClosedNode>/CoreModule_Test C:|XilinxProjects|ProyectoCorto1|CoreModule_Test.v/uut - CoreModule/f4 - Filtro</ClosedNode>
          <ClosedNode>/CoreModule_Test C:|XilinxProjects|ProyectoCorto1|CoreModule_Test.v/uut - CoreModule/f5 - Filtro</ClosedNode>
+         <ClosedNode>/Filtro_test C:|Users|AndresMaria|Documents|Taller en Sistemas Digitales|Taller-Digital|ProyectoCorto1|Filtro_test.v</ClosedNode>
          <ClosedNode>/Filtro_test C:|XilinxProjects|ProyectoCorto1|Filtro_test.v</ClosedNode>
          <ClosedNode>/FreqDivisor_Test C:|XilinxProjects|ProyectoCorto1|FreqDivisor_Test.v</ClosedNode>
          <ClosedNode>/RomTest C:|XilinxProjects|ProyectoCorto1|RomTest.v</ClosedNode>
@@ -134,13 +136,13 @@
          <ClosedNode>/square_test C:|XilinxProjects|ProyectoCorto1|square_test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>CoreModule_Test (C:/XilinxProjects/ProyectoCorto1/CoreModule_Test.v)</SelectedItem>
+         <SelectedItem>Filtro_test (C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1/Filtro_test.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >8</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000162000000020000000000000000000000000200000064ffffffff000000810000000300000002000001620000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ad000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ad0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>CoreModule_Test (C:/XilinxProjects/ProyectoCorto1/CoreModule_Test.v)</CurrentItem>
+      <CurrentItem>Filtro_test (C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1/Filtro_test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -148,13 +150,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -170,5 +172,5 @@
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
 </Project>

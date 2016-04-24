@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/control_Test2_isim_beh.exe" -prj "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/control_Test2_beh.prj" "control_Test2" "work.glbl" 
