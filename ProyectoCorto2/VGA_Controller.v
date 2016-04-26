@@ -52,9 +52,20 @@ reg [9:0] HCountNext, VCountNext;
 //Parametros locales para la señal de salida
 reg [1:0] State, StateNext;
 
+//Parametro local del RGB
+wire [2:0] rgb;
+
 //Estados de la señal
 assign HEnd = (HCount == (H_size + H_Front + H_Back + H_Retrace - 1)); //Verifica contador Horizontal
 assign VEnd = (VCount == (V_size + V_Front + V_Back + V_Retrace - 1));//Verifica contador Vertical
+
+//Modulo de actualizacion de RGB
+DrawSystem draw (
+	.clk(clk),
+	.HCount(HCount),
+	.VCount(VCount),
+	.rgb(rgb)
+	);
 
 //Sincronizacion de contadores
 always @(posedge clk, posedge rst)
