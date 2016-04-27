@@ -1,0 +1,11 @@
+NET "M_Clk" LOC = L13;
+NET "M_Dat" LOC = K14;
+NET "Clk" LOC = V10;
+NET "led0" LOC = U16;
+NET "led1" LOC = V16;
+NET "led2" LOC = U15;
+NET "led3" LOC = V15;
+NET "led4" LOC = M11;
+NET "led5" LOC = N11;
+
+

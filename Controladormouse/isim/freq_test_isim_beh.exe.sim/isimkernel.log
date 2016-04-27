@@ -1,10 +1,10 @@
 Command line:
-   control_Test2_isim_beh.exe
+   freq_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49937
+     -socket  52230
 
-Sat Apr 23 19:09:33 2016
+Tue Apr 26 20:53:15 2016
 
 
  Elaboration Time: 0.03125 sec

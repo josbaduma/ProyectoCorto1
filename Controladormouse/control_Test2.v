@@ -37,7 +37,7 @@ module control_Test2;
 	wire Abajo;
 	wire [7:0] MagX;
 	wire [7:0] MagY;
-	wire [6:0] tmp;
+ 
 
 	// Bidirs
 	wire M_Dat;
@@ -53,8 +53,7 @@ module control_Test2;
 		.Arriba(Arriba), 
 		.Abajo(Abajo), 
 		.MagX(MagX), 
-		.MagY(MagY),
-		.tmp(tmp)
+		.MagY(MagY)
 	);
 
 	initial begin
@@ -119,6 +118,78 @@ module control_Test2;
 		#1; M_CLK = 1; bidi = 1;
 		#1; M_CLK = 0; bidi = 1;
 		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;//////1 32
+		#1; M_CLK = 1; bidi = 0;//////1 32
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 1;//////1 33                      
+									 
+	   #1; M_CLK = 0; bidi = 1;//////0 34
+      #1; M_CLK = 1;
+		
+		
+		
+		#10; M_CLK = 0; bidi = 0;/////0 1
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 1;/////fijo
+		#1; M_CLK = 1; bidi = 1;////
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 1;//////old 11
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 1;//////1 11
+		#1; M_CLK = 1; bidi = 1;//////1 11
+		#1; M_CLK = 0; bidi = 0;//////0
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;//////old 33
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;//////1 21
+		#1; M_CLK = 1; bidi = 0;//////1 21
+		#1; M_CLK = 0; bidi = 1;
+		#1; M_CLK = 1; bidi = 1;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
+		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 1; bidi = 0;
 		#1; M_CLK = 0; bidi = 0;
 		#1; M_CLK = 1; bidi = 0;
 		#1; M_CLK = 0; bidi = 0;

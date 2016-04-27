@@ -28,8 +28,7 @@ module controlMouse(
 	 output Arriba,
 	 output Abajo,
 	 output [7:0] MagX,
-	 output [7:0] MagY,
-	 output [6:0] tmp
+	 output [7:0] MagY
     );
 //Internal variables
 reg direccion;
@@ -41,7 +40,6 @@ reg [32:0] inData;
 reg [2:0] st,nst,state,next_state; 
 //Code
 //output
-assign tmp = bitCount;
 assign Click = data[31] || data[31]; //click izquierdo y derecho iguales
 assign Izquierda = (data[27] == 1)? 1'b1:1'b0;
 assign Derecha = (data[27] == 0)? 1'b1:1'b0;
