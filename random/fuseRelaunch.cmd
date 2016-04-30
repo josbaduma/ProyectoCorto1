@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/random/pos_generator_test_isim_beh.exe" -prj "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/random/pos_generator_test_beh.prj" "work.pos_generator_test" "work.glbl" 
