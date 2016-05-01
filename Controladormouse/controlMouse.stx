@@ -1,16 +1,16 @@
 Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/Controladormouse/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
---> Parameter xsthdpdir set to C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/Controladormouse/xst
+--> Parameter xsthdpdir set to C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.46 secs
  
 --> Reading design: controlMouse.prj
 
@@ -39,12 +39,12 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Taller-Digital\Controladormouse\controlMouse.v" into library work
+Analyzing Verilog file "C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Controladormouse\controlMouse.v" into library work
 Parsing module <controlMouse>.
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.63 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.91 secs
  
 --> 
 

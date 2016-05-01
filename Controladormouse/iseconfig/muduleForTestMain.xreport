@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-29T14:59:14</DateModified>
+  <DateModified>2016-04-30T23:22:36</DateModified>
   <ModuleName>muduleForTestMain</ModuleName>
   <SummaryTimeStamp>2016-04-26T20:56:39</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/Controladormouse/iseconfig/muduleForTestMain.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/Controladormouse\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/iseconfig/muduleForTestMain.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse\</ImplementationReportsDirectory>
   <DateInitialized>2016-04-26T13:42:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/Controladormouse/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/Controladormouse/xst"
+set -tmpdir "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Controladormouse/xst"
 run -compileonly yes
 -p xc6slx16-3-csg324
 -top controlMouse
