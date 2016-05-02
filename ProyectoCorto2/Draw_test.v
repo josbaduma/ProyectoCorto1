@@ -27,6 +27,7 @@ module Draw_test;
 	// Inputs
 	reg [9:0] HCount;
 	reg [9:0] VCount;
+	reg [15:0] regCard;
 	reg [3:0] posA;
 	reg [3:0] posB;
 	reg [3:0] posC;
@@ -52,6 +53,7 @@ module Draw_test;
 	DrawSystem uut (
 		.HCount(HCount), 
 		.VCount(VCount), 
+		.regCard(regCard),
 		.posA(posA), 
 		.posB(posB), 
 		.posC(posC), 
@@ -76,6 +78,7 @@ module Draw_test;
 		// Initialize Inputs
 		HCount = 0;
 		VCount = 0;
+		regCard = 0;
 		posA = 0;
 		posB = 1;
 		posC = 2;
@@ -97,10 +100,18 @@ module Draw_test;
 		#100;
         
 		// Add stimulus here
-			#5; HCount <= 226;
-				 VCount <= 6;
+			#5; HCount <= 140;
+				 VCount <= 75;
+				 regCard <= 1;
 			#50; HCount <= 231;
 				  VCount <= 71;
+				  regCard <= 1;
+			#50; HCount <= 140;
+				 VCount <= 75;
+				 regCard <= 0;
+			#50; HCount <= 231;
+				  VCount <= 71;
+				  regCard <= 0;
 	end
       
 endmodule

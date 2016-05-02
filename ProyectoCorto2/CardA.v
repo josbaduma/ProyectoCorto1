@@ -33,12 +33,12 @@ localparam height = 83;
 reg [9:0] pos_x_l, pos_x_r;
 reg [9:0] pos_y_t, pos_y_b;
 
-assign card_sq = ((pos_x_l <= HCount) && (HCount <= pos_x_r) &&
-						(pos_y_t <= VCount) && (VCount <= pos_y_b));
-
 wire [6:0] addr;
 wire [9:0] col;
 wire [248:0] data;
+reg card_sq;
+//assign card_sq = ((pos_x_l <= HCount) && (HCount <= pos_x_r) &&
+//						(pos_y_t <= VCount) && (VCount <= pos_y_b));
 
 ROM_CardA card (
 	.addr(addr),
@@ -109,11 +109,15 @@ end
 
 always @*
 begin
-	if( ~enable && card_sq) begin
+
+	card_sq <= ((pos_x_l <= HCount) && (HCount <= pos_x_r) &&
+	  			  (pos_y_t <= VCount) && (VCount <= pos_y_b));
+
+	if( enable == 0 && card_sq == 1) begin
 		rgb <= 3'b100;
 		cardon <= 1;
 	end
-	else if( enable && card_sq )begin
+	else if( enable == 1 && card_sq == 1 )begin
 		rgb[0] <= data[col];
 		rgb[1] <= data[col+1];
 		rgb[2] <= data[col+2];

@@ -23,10 +23,11 @@ module DrawSystem(
     input [9:0] VCount,
 	 input [15:0] regCard,
 	 input [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP,
-    output reg [2:0] rgb
+    output reg [16:0] selRGB,
+	 output reg [2:0] rgb
     );
 
-reg [16:0] selRGB;
+//reg [16:0] selRGB;
 wire cardAon, cardBon, cardCon,cardDon, cardEon, cardFon, cardGon,cardHon, cardIon, cardJon, cardKon,cardLon, cardMon, cardNon, cardOon, cardPon, titleon;
 wire [2:0] rgbA, rgbB, rgbC, rgbD, rgbE, rgbF, rgbG, rgbH, rgbI, rgbJ, rgbK, rgbL, rgbM, rgbN, rgbO, rgbP, rgbtitle, rgbnext;
 
