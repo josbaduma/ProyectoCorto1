@@ -1,0 +1,10 @@
+Command line:
+   mouse_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50007
+
+Mon May 02 11:20:17 2016
+
+
+ Elaboration Time: 0.0625 sec

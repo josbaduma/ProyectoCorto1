@@ -28,8 +28,8 @@ module controlMouse(
 	 output Arriba,
 	 output Abajo,
 	 output [7:0] MagX,
-	 output [7:0] MagY,
-	 output [31:0] c
+	 output [7:0] MagY//,
+	 //output [31:0] c
     );
 //Internal variables
 reg direccion;
@@ -48,10 +48,11 @@ assign Abajo = (data[26] == 1)? 1'b1:1'b0;
 assign Arriba = (data[26] == 0)? 1'b1:1'b0;
 assign MagX = {data[13],data[14],data[15],data[16],data[17],data[18],data[19],data[20]};
 assign MagY = {data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9]};
-assign c = data;
+//assign c = data;
 //bidir
 assign M_Dat = ((count == 0)&&direccion)? 1'b0:
-   ((count == 1)&&direccion)? 1'b0:
+   //((count == 1)&&direccion)? 1'b0:
+	((count == 1)&&direccion)? 1'b0:
 	((count == 2)&&direccion)? 1'b0:
 	((count == 3)&&direccion)? 1'b1:
 	((count == 4)&&direccion)? 1'b0:
@@ -68,7 +69,7 @@ assign M_Dat = ((count == 0)&&direccion)? 1'b0:
 initial
 begin
 direccion = 1;
-count = 0;
+count = 11;
 maquina = 0;
 end
 always@(negedge M_CLK)
@@ -76,7 +77,7 @@ begin
 case(st)
     0:begin
 	   count = count + 1;
-	   if(count == 11)
+	   if(count >= 11)
 	      nst = 1;
 	   else
 	      nst = 0;

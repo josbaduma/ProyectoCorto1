@@ -98,11 +98,11 @@ module mouse_test;
 		#100;
         
 		// Add stimulus here
-      M_CLK = 1; bidi = 1;		
+      M_CLK = 1; bidi = 1;		 
 		#10; M_CLK = 0; bidi = 0;
 		#10; M_CLK = 1; bidi = 1;
-		#10; M_CLK = 0; bidi = 0;/////0 1
-		#1; M_CLK = 1; bidi = 0;
+		//#10; M_CLK = 0; bidi = 0;/////0 1
+		#1; M_CLK = 1; bidi = 0; 
 		#1; M_CLK = 0; bidi = 0;/////fijo
 		#1; M_CLK = 1; bidi = 0;////
 		#1; M_CLK = 0; bidi = 0;
@@ -235,7 +235,7 @@ module mouse_test;
 		#1; M_CLK = 1; bidi = 0;
 		#1; M_CLK = 0; bidi = 0;//////1 32
 		#1; M_CLK = 1; bidi = 0;//////1 32
-		#1; M_CLK = 0; bidi = 0;
+		#1; M_CLK = 0; bidi = 1;
 		#1; M_CLK = 1; bidi = 1;//////1 33                      
 									 
 	   #1; M_CLK = 0; bidi = 1;//////0 34
