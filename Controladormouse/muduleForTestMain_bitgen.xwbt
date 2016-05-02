@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Controladormouse\muduleForTestMain.ncd
-OUTFILE=C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Controladormouse\muduleForTestMain.bit
+INFILE=C:\Users\joseb\Documents\GitHub\Taller-Digital\Controladormouse\muduleForTestMain.ncd
+OUTFILE=C:\Users\joseb\Documents\GitHub\Taller-Digital\Controladormouse\muduleForTestMain.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Controladormouse
+WORKINGDIR=C:\Users\joseb\Documents\GitHub\Taller-Digital\Controladormouse
 LICENSE=WebPack
-USER_INFO=211154327_0_0_815
+USER_INFO=211154129_0_0_718

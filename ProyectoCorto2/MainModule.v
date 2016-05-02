@@ -23,10 +23,11 @@ module MainModule(
 	 input rst,
     output wire HSync,
     output wire VSync,
-	 output wire [8:0] rgb
+	 output wire [2:0] rgb
     );
 
-wire PixelCLK;	 
+wire PixelCLK;
+wire [9:0] HCount, VCount;	 
 reg [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP;
 	 
 FreqDivisor freq (
@@ -38,6 +39,16 @@ FreqDivisor freq (
 VGA_Controller vga (
 	.clk(PixelCLK),
 	.rst(rst),
+	.HCount(HCount),
+	.VCount(VCount),
+	.HSync(HSync),
+	.VSync(VSync)
+);
+
+//Modulo de actualizacion de RGB
+DrawSystem draw (
+	.HCount(HCount),
+	.VCount(VCount),
 	.posA(posA),
 	.posB(posB),
 	.posC(posC),
@@ -54,10 +65,8 @@ VGA_Controller vga (
 	.posN(posN),
 	.posO(posO),
 	.posP(posP),
-	.HSync(HSync),
-	.VSync(VSync),
 	.rgb(rgb)
-);
+	);
 
 always @(posedge PixelCLK) begin
 	posA <= 3;
@@ -68,11 +77,11 @@ always @(posedge PixelCLK) begin
 	posF <= 10;
 	posG <= 7;
 	posH <= 14;
-	posI <= 2;
+	posI <= 9;
 	posJ <= 5;
 	posK <= 8;
 	posL <= 0;
-	posM <= 1;
+	posM <= 2;
 	posN <= 12;
 	posO <= 13;
 	posP <= 6;

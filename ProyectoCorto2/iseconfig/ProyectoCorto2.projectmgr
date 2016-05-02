@@ -7,16 +7,66 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/CardB C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardB.v</ClosedNode>
+         <ClosedNode>/CardC C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardC.v</ClosedNode>
+         <ClosedNode>/CardD C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardD.v</ClosedNode>
+         <ClosedNode>/CardE C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardE.v</ClosedNode>
+         <ClosedNode>/CardF C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardF.v</ClosedNode>
+         <ClosedNode>/CardG C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardG.v</ClosedNode>
+         <ClosedNode>/CardH C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardH.v</ClosedNode>
+         <ClosedNode>/CardI C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardI.v</ClosedNode>
+         <ClosedNode>/CardJ C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardJ.v</ClosedNode>
+         <ClosedNode>/CardK C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardK.v</ClosedNode>
+         <ClosedNode>/CardL C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardL.v</ClosedNode>
+         <ClosedNode>/CardM C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardM.v</ClosedNode>
+         <ClosedNode>/CardN C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardN.v</ClosedNode>
+         <ClosedNode>/CardO C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardO.v</ClosedNode>
+         <ClosedNode>/CardP C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardP.v</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/carda - CardA</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardb - CardB</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardc - CardC</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardd - CardD</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/carde - CardE</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardf - CardF</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardg - CardG</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardh - CardH</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardi - CardI</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardj - CardJ</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardk - CardK</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardl - CardL</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardm - CardM</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardn - CardN</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardo - CardO</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/cardp - CardP</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/title - TitleText</ClosedNode>
          <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/carda - CardA</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardb - CardB</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardc - CardC</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardd - CardD</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/carde - CardE</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardf - CardF</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardg - CardG</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardh - CardH</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardi - CardI</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardj - CardJ</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardk - CardK</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardl - CardL</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardm - CardM</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardn - CardN</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardo - CardO</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/vga - VGA_Controller/draw - DrawSystem/cardp - CardP</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MemoryFSM (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MemoryFSM.v)</SelectedItem>
+         <SelectedItem>MainModule (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MainModule.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000012c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000012c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>MemoryFSM (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MemoryFSM.v)</CurrentItem>
+      <CurrentItem>MainModule (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MainModule.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -39,7 +89,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028e000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001c20000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001b10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>FreqDivisor.v</CurrentItem>
    </ItemView>
@@ -61,6 +111,10 @@
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
@@ -75,19 +129,39 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/carda - CardA</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardb - CardB</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardc - CardC</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardd - CardD</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/carde - CardE</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardf - CardF</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardg - CardG</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardh - CardH</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardi - CardI</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardj - CardJ</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardk - CardK</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardl - CardL</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardm - CardM</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardn - CardN</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardo - CardO</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/cardp - CardP</ClosedNode>
+         <ClosedNode>/Draw_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Draw_test.v/uut - DrawSystem/title - TitleText</ClosedNode>
          <ClosedNode>/FSM_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|FSM_test.v</ClosedNode>
          <ClosedNode>/Freq_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Freq_Test.v</ClosedNode>
          <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v</ClosedNode>
+         <ClosedNode>/Main_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Main_Test.v</ClosedNode>
+         <ClosedNode>/Title_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|Title_Test.v</ClosedNode>
          <ClosedNode>/VGA_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|VGA_Test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>FSM_test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/FSM_test.v)</SelectedItem>
+         <SelectedItem>Title_Test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Title_Test.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e0000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e00000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000c2000000020000000000000000000000000200000064ffffffff000000810000000300000002000000c20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>FSM_test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/FSM_test.v)</CurrentItem>
+      <CurrentItem>Title_Test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Title_Test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -95,27 +169,51 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Design Utilities</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c3000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Design Utilities</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" />
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
 </Project>

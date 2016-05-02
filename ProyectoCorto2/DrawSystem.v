@@ -19,19 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DrawSystem(
-    input clk,
     input [9:0] HCount,
     input [9:0] VCount,
 	 input [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP,
-    output reg [8:0] rgb
+	 output reg [16:0] selRGB,
+    output reg [2:0] rgb
     );
 
-reg [15:0] selRGB;
-wire cardAon, cardBon, cardCon,cardDon, cardEon, cardFon, cardGon,cardHon, cardIon, cardJon, cardKon,cardLon, cardMon, cardNon, cardOon,cardPon;
-wire [8:0] rgbA, rgbB, rgbC, rgbD, rgbE, rgbF, rgbG, rgbH, rgbI, rgbJ, rgbK, rgbL, rgbM, rgbN, rgbO, rgbP, rgbnext;
+//reg [16:0] selRGB;
+wire cardAon, cardBon, cardCon,cardDon, cardEon, cardFon, cardGon,cardHon, cardIon, cardJon, cardKon,cardLon, cardMon, cardNon, cardOon, cardPon, titleon;
+wire [2:0] rgbA, rgbB, rgbC, rgbD, rgbE, rgbF, rgbG, rgbH, rgbI, rgbJ, rgbK, rgbL, rgbM, rgbN, rgbO, rgbP, rgbtitle, rgbnext;
 
 CardA carda (
-	.clk(clk),
 	.enable(),
 	.pos(posA),
 	.HCount(HCount),
@@ -41,7 +40,6 @@ CardA carda (
 	);
 
 CardB cardb (
-	.clk(clk),
 	.enable(),
 	.pos(posB),
 	.HCount(HCount),
@@ -51,7 +49,6 @@ CardB cardb (
 	);
 
 CardC cardc (
-	.clk(clk),
 	.enable(),
 	.pos(posC),
 	.HCount(HCount),
@@ -61,7 +58,6 @@ CardC cardc (
 	);
 
 CardD cardd (
-	.clk(clk),
 	.enable(),
 	.pos(posD),
 	.HCount(HCount),
@@ -71,7 +67,6 @@ CardD cardd (
 	);
 
 CardE carde (
-	.clk(clk),
 	.enable(),
 	.pos(posE),
 	.HCount(HCount),
@@ -81,7 +76,6 @@ CardE carde (
 	);
 	
 CardF cardf (
-	.clk(clk),
 	.enable(),
 	.pos(posF),
 	.HCount(HCount),
@@ -91,7 +85,6 @@ CardF cardf (
 	);
 	
 CardG cardg (
-	.clk(clk),
 	.enable(),
 	.pos(posG),
 	.HCount(HCount),
@@ -101,7 +94,6 @@ CardG cardg (
 	);
 	
 CardH cardh (
-	.clk(clk),
 	.enable(),
 	.pos(posH),
 	.HCount(HCount),
@@ -111,7 +103,6 @@ CardH cardh (
 	);
 
 CardI cardi (
-	.clk(clk),
 	.enable(),
 	.pos(posI),
 	.HCount(HCount),
@@ -121,7 +112,6 @@ CardI cardi (
 	);
 
 CardJ cardj (
-	.clk(clk),
 	.enable(),
 	.pos(posJ),
 	.HCount(HCount),
@@ -131,7 +121,6 @@ CardJ cardj (
 	);
 
 CardK cardk (
-	.clk(clk),
 	.enable(),
 	.pos(posK),
 	.HCount(HCount),
@@ -141,7 +130,6 @@ CardK cardk (
 	);
 
 CardL cardl (
-	.clk(clk),
 	.enable(),
 	.pos(posL),
 	.HCount(HCount),
@@ -151,7 +139,6 @@ CardL cardl (
 	);
 
 CardM cardm (
-	.clk(clk),
 	.enable(),
 	.pos(posM),
 	.HCount(HCount),
@@ -161,7 +148,6 @@ CardM cardm (
 	);
 	
 CardN cardn (
-	.clk(clk),
 	.enable(),
 	.pos(posN),
 	.HCount(HCount),
@@ -171,7 +157,6 @@ CardN cardn (
 	);
 	
 CardO cardo (
-	.clk(clk),
 	.enable(),
 	.pos(posO),
 	.HCount(HCount),
@@ -181,7 +166,6 @@ CardO cardo (
 	);
 	
 CardP cardp (
-	.clk(clk),
 	.enable(),
 	.pos(posP),
 	.HCount(HCount),
@@ -190,6 +174,13 @@ CardP cardp (
 	.rgb(rgbP)
 	);
 
+TitleText title (
+	.HCount(HCount),
+	.VCount(VCount),
+	.titleon(titleon),
+	.rgb(rgbtitle)
+	);
+	
 MUX_RGB mux (
 	.rgbA(rgbA),
 	.rgbB(rgbB),
@@ -207,11 +198,12 @@ MUX_RGB mux (
 	.rgbN(rgbN),
 	.rgbO(rgbO),
 	.rgbP(rgbP),
+	.rgbtitle(rgbtitle),
 	.selRGB(selRGB),
 	.rgbnext(rgbnext)
 	);
 	
-always @(posedge clk)
+always @*
 begin
 	selRGB[0] <= cardAon;
 	selRGB[1] <= cardBon;
@@ -229,6 +221,7 @@ begin
 	selRGB[13] <= cardNon;
 	selRGB[14] <= cardOon;
 	selRGB[15] <= cardPon;
+	selRGB[16] <= titleon;
 	rgb <= rgbnext;
 end
 

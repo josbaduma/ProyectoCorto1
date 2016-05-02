@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   12:54:16 05/01/2016
+// Create Date:   10:44:23 05/02/2016
 // Design Name:   DrawSystem
 // Module Name:   C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Draw_test.v
 // Project Name:  ProyectoCorto2
@@ -25,42 +25,83 @@
 module Draw_test;
 
 	// Inputs
-	reg clk;
 	reg [9:0] HCount;
 	reg [9:0] VCount;
+	reg [3:0] posA;
+	reg [3:0] posB;
+	reg [3:0] posC;
+	reg [3:0] posD;
+	reg [3:0] posE;
+	reg [3:0] posF;
+	reg [3:0] posG;
+	reg [3:0] posH;
+	reg [3:0] posI;
+	reg [3:0] posJ;
+	reg [3:0] posK;
+	reg [3:0] posL;
+	reg [3:0] posM;
+	reg [3:0] posN;
+	reg [3:0] posO;
+	reg [3:0] posP;
 
 	// Outputs
-	wire [1:0] selRGB;
-	wire [8:0] rgb;
+	wire [16:0] selRGB;
+	wire [2:0] rgb;
 
 	// Instantiate the Unit Under Test (UUT)
 	DrawSystem uut (
-		.clk(clk), 
 		.HCount(HCount), 
 		.VCount(VCount), 
-		.selRGB(selRGB), 
+		.posA(posA), 
+		.posB(posB), 
+		.posC(posC), 
+		.posD(posD), 
+		.posE(posE), 
+		.posF(posF), 
+		.posG(posG), 
+		.posH(posH), 
+		.posI(posI), 
+		.posJ(posJ), 
+		.posK(posK), 
+		.posL(posL), 
+		.posM(posM), 
+		.posN(posN), 
+		.posO(posO), 
+		.posP(posP),
+		.selRGB(selRGB),
 		.rgb(rgb)
 	);
 
 	initial begin
 		// Initialize Inputs
-		clk = 0;
 		HCount = 0;
 		VCount = 0;
+		posA = 0;
+		posB = 1;
+		posC = 2;
+		posD = 3;
+		posE = 4;
+		posF = 5;
+		posG = 6;
+		posH = 7;
+		posI = 8;
+		posJ = 9;
+		posK = 10;
+		posL = 11;
+		posM = 12;
+		posN = 13;
+		posO = 14;
+		posP = 15;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-		@(posedge clk)
-			#10; HCount <= 130;
-				 VCount <= 65;
-
+			#5; HCount <= 226;
+				 VCount <= 6;
+			#50; HCount <= 231;
+				  VCount <= 71;
 	end
-   
-	always begin
-	clk <= 1; #5;
-	clk <= 0; #5;
-	end
+      
 endmodule
 
