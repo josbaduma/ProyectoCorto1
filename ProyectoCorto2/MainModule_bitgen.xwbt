@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\joseb\Documents\GitHub\Taller-Digital\ProyectoCorto2\MainModule.ncd
+OUTFILE=C:\Users\joseb\Documents\GitHub\Taller-Digital\ProyectoCorto2\MainModule.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\joseb\Documents\GitHub\Taller-Digital\ProyectoCorto2
+LICENSE=WebPack
+USER_INFO=211154129_0_0_718

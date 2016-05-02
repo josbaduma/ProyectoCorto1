@@ -21,8 +21,10 @@
 module VGA_Controller(
     input clk,
     input rst,
+	 input [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP,
     output reg HSync,
-    output reg VSync
+    output reg VSync,
+	 output wire [8:0] rgb
     );
 
 //Dimensiones de la pantalla
@@ -52,9 +54,6 @@ reg [9:0] HCountNext, VCountNext;
 //Parametros locales para la señal de salida
 reg [1:0] State, StateNext;
 
-//Parametro local del RGB
-wire [2:0] rgb;
-
 //Estados de la señal
 assign HEnd = (HCount == (H_size + H_Front + H_Back + H_Retrace - 1)); //Verifica contador Horizontal
 assign VEnd = (VCount == (V_size + V_Front + V_Back + V_Retrace - 1));//Verifica contador Vertical
@@ -64,6 +63,22 @@ DrawSystem draw (
 	.clk(clk),
 	.HCount(HCount),
 	.VCount(VCount),
+	.posA(posA),
+	.posB(posB),
+	.posC(posC),
+	.posD(posD),
+	.posE(posE),
+	.posF(posF),
+	.posG(posG),
+	.posH(posH),
+	.posI(posI),
+	.posJ(posJ),
+	.posK(posK),
+	.posL(posL),
+	.posM(posM),
+	.posN(posN),
+	.posO(posO),
+	.posP(posP),
 	.rgb(rgb)
 	);
 
