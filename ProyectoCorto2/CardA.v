@@ -109,7 +109,11 @@ end
 
 always @*
 begin
-	if( card_sq )begin
+	if( ~enable && card_sq) begin
+		rgb <= 3'b100;
+		cardon <= 1;
+	end
+	else if( enable && card_sq )begin
 		rgb[0] <= data[col];
 		rgb[1] <= data[col+1];
 		rgb[2] <= data[col+2];

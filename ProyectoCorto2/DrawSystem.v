@@ -21,17 +21,17 @@
 module DrawSystem(
     input [9:0] HCount,
     input [9:0] VCount,
+	 input [15:0] regCard,
 	 input [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP,
-	 output reg [16:0] selRGB,
     output reg [2:0] rgb
     );
 
-//reg [16:0] selRGB;
+reg [16:0] selRGB;
 wire cardAon, cardBon, cardCon,cardDon, cardEon, cardFon, cardGon,cardHon, cardIon, cardJon, cardKon,cardLon, cardMon, cardNon, cardOon, cardPon, titleon;
 wire [2:0] rgbA, rgbB, rgbC, rgbD, rgbE, rgbF, rgbG, rgbH, rgbI, rgbJ, rgbK, rgbL, rgbM, rgbN, rgbO, rgbP, rgbtitle, rgbnext;
 
 CardA carda (
-	.enable(),
+	.enable(regCard[0]),
 	.pos(posA),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -40,7 +40,7 @@ CardA carda (
 	);
 
 CardB cardb (
-	.enable(),
+	.enable(regCard[1]),
 	.pos(posB),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -49,7 +49,7 @@ CardB cardb (
 	);
 
 CardC cardc (
-	.enable(),
+	.enable(regCard[2]),
 	.pos(posC),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -58,7 +58,7 @@ CardC cardc (
 	);
 
 CardD cardd (
-	.enable(),
+	.enable(regCard[3]),
 	.pos(posD),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -67,7 +67,7 @@ CardD cardd (
 	);
 
 CardE carde (
-	.enable(),
+	.enable(regCard[4]),
 	.pos(posE),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -76,7 +76,7 @@ CardE carde (
 	);
 	
 CardF cardf (
-	.enable(),
+	.enable(regCard[5]),
 	.pos(posF),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -85,7 +85,7 @@ CardF cardf (
 	);
 	
 CardG cardg (
-	.enable(),
+	.enable(regCard[6]),
 	.pos(posG),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -94,7 +94,7 @@ CardG cardg (
 	);
 	
 CardH cardh (
-	.enable(),
+	.enable(regCard[7]),
 	.pos(posH),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -103,7 +103,7 @@ CardH cardh (
 	);
 
 CardI cardi (
-	.enable(),
+	.enable(regCard[8]),
 	.pos(posI),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -112,7 +112,7 @@ CardI cardi (
 	);
 
 CardJ cardj (
-	.enable(),
+	.enable(regCard[9]),
 	.pos(posJ),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -121,7 +121,7 @@ CardJ cardj (
 	);
 
 CardK cardk (
-	.enable(),
+	.enable(regCard[10]),
 	.pos(posK),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -130,7 +130,7 @@ CardK cardk (
 	);
 
 CardL cardl (
-	.enable(),
+	.enable(regCard[11]),
 	.pos(posL),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -139,7 +139,7 @@ CardL cardl (
 	);
 
 CardM cardm (
-	.enable(),
+	.enable(regCard[12]),
 	.pos(posM),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -148,7 +148,7 @@ CardM cardm (
 	);
 	
 CardN cardn (
-	.enable(),
+	.enable(regCard[13]),
 	.pos(posN),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -157,7 +157,7 @@ CardN cardn (
 	);
 	
 CardO cardo (
-	.enable(),
+	.enable(regCard[14]),
 	.pos(posO),
 	.HCount(HCount),
 	.VCount(VCount),
@@ -166,7 +166,7 @@ CardO cardo (
 	);
 	
 CardP cardp (
-	.enable(),
+	.enable(regCard[15]),
 	.pos(posP),
 	.HCount(HCount),
 	.VCount(VCount),

@@ -29,6 +29,7 @@ module MainModule(
 wire PixelCLK;
 wire [9:0] HCount, VCount;	 
 reg [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP;
+reg [15:0] regCard;
 	 
 FreqDivisor freq (
 	.clk(clk),
@@ -49,6 +50,7 @@ VGA_Controller vga (
 DrawSystem draw (
 	.HCount(HCount),
 	.VCount(VCount),
+	.regCard(regCard),
 	.posA(posA),
 	.posB(posB),
 	.posC(posC),
@@ -69,6 +71,7 @@ DrawSystem draw (
 	);
 
 always @(posedge PixelCLK) begin
+	regCard <= 0;
 	posA <= 3;
 	posB <= 15;
 	posC <= 4;
