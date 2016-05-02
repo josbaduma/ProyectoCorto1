@@ -20,71 +20,50 @@
 //////////////////////////////////////////////////////////////////////////////////
 module pos_generator(
     input FPGA_Clk,
-    output reg [9:0] card1X,
-	 output reg [9:0] card1Y,
-	 output reg [9:0] card2X,
-	 output reg [9:0] card2Y,
-	 output reg [9:0] card3X,
-	 output reg [9:0] card3Y,
-	 output reg [9:0] card4X,
-	 output reg [9:0] card4Y,
-	 output reg [9:0] card5X,
-	 output reg [9:0] card5Y,
-	 output reg [9:0] card6X,
-	 output reg [9:0] card6Y,
-	 output reg [9:0] card7X,
-	 output reg [9:0] card7Y,
-	 output reg [9:0] card8X,
-	 output reg [9:0] card8Y,
-	 output reg [9:0] card9X,
-	 output reg [9:0] card9Y,
-	 output reg [9:0] card10X,
-	 output reg [9:0] card10Y,
-	 output reg [9:0] card11X,
-	 output reg [9:0] card11Y,
-	 output reg [9:0] card12X,
-	 output reg [9:0] card12Y,
-	 output reg [9:0] card13X,
-	 output reg [9:0] card13Y,
-	 output reg [9:0] card14X,
-	 output reg [9:0] card14Y,
-	 output reg [9:0] card15X,
-	 output reg [9:0] card15Y,
-	 output reg [9:0] card16X,
-	 output reg [9:0] card16Y,
-	 output [3:0] c,
-	 output d,
-	 output e
-	 	 
+    output reg [4:0] card1X,
+	 output reg [4:0] card2Y,
+	 output reg [4:0] card3X,
+	 output reg [4:0] card4Y,
+	 output reg [4:0] card5X,
+	 output reg [4:0] card6Y,
+	 output reg [4:0] card7X,
+	 output reg [4:0] card8Y,
+	 output reg [4:0] card9X,
+	 output reg [4:0] card10Y,
+	 output reg [4:0] card11X,
+	 output reg [4:0] card12Y,
+	 output reg [4:0] card13X,
+	 output reg [4:0] card14Y,
+	 output reg [4:0] card15X,
+	 output reg [4:0] card16Y
     );
 
 //internal var
 reg [1:0] state, next_state;
 reg [3:0] count, next_value, i, st, nst;
-reg [9:0] posicion [0:17];//[3:0] [0:17]
+reg [4:0] posicion [0:17];//[3:0] [0:17]
 reg avanzar, aceptado;
 //code
-assign c = next_value;
-assign d = aceptado;
-assign e = avanzar;   
+
+ 
 always@(FPGA_Clk)
 begin
 card1X <=  posicion[0];
-card1Y <= posicion[1];
-card2X <= posicion[2];
-card2Y <= posicion[3];
-card3X <= posicion[4];
-card3Y <= posicion[5];
-card4X <= posicion[6];
-card4Y <= posicion[7];
-card5X <= posicion[8];
-card5Y <= posicion[9];
-card6X <= posicion[10];
-card6Y <= posicion[11];
-card7X <= posicion[12];
-card7Y <= posicion[13];
-card8X <= posicion[14];
-card8Y <= posicion[15];
+card2Y <= posicion[1];
+card3X <= posicion[2];
+card4Y <= posicion[3];
+card5X <= posicion[4];
+card6Y <= posicion[5];
+card7X <= posicion[6];
+card8Y <= posicion[7];
+card9X <= posicion[8];
+card10Y <= posicion[9];
+card11X <= posicion[10];
+card12Y <= posicion[11];
+card13X <= posicion[12];
+card14Y <= posicion[13];
+card15X <= posicion[14];
+card16Y <= posicion[15];
 end
 
 always@(posedge FPGA_Clk)

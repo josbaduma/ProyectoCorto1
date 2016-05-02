@@ -37,7 +37,7 @@ module mouse_test;
 	wire Abajo;
 	wire [7:0] MagX;
 	wire [7:0] MagY;
-	//wire [31:0] c;/////
+	wire [31:0] c;/////
 
 	// Bidirs
 	wire M_Dat;
@@ -53,8 +53,8 @@ module mouse_test;
 		.Arriba(Arriba), 
 		.Abajo(Abajo), 
 		.MagX(MagX), 
-		.MagY(MagY)//,
-		//.c(c)
+		.MagY(MagY),
+		.c(c)
 	);
 
 	initial begin
