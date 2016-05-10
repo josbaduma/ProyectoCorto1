@@ -21,6 +21,11 @@
 module MainModule(
     input clk,
 	 input rst,
+	 input up0,
+	 input down0,
+	 input left0,
+	 input right0,
+	 input select0,
     output wire HSync,
     output wire VSync,
 	 output wire [2:0] rgb
@@ -28,21 +33,87 @@ module MainModule(
 
 wire PixelCLK;
 wire [9:0] HCount, VCount;	 
-reg [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP;
-reg [15:0] regCard;
-	 
+wire [3:0] selNum;
+wire [15:0] regCard;
+wire [9:0] posMX, posMY;
+reg [4:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP;
+wire [4:0] card;
+	
+//pos_generator random (
+//	.clk(clk), 
+//   .card1(posA), 
+//   .card2(posB), 
+//   .card3(posC), 
+//   .card4(posD), 
+//   .card5(posE), 
+//   .card6(posF), 
+//   .card7(posG), 
+//   .card8(posH), 
+//   .card9(posI), 
+//   .card10(posJ), 
+//   .card11(posK), 
+//   .card12(posL), 
+//   .card13(posM), 
+//   .card14(posN), 
+//   .card15(posO), 
+//   .card16(posP)
+//);
+	
 FreqDivisor freq (
 	.clk(clk),
 	.rst(rst),
 	.PixelCLK(PixelCLK)
 );
 
-VGA_Controller vga (
+MouseAlt mouse (
+    .clk(clk), 
+    .up0(up0), 
+    .down0(down0), 
+    .left0(left0), 
+    .right0(right0), 
+    .select0(select0), 
+    .Click(Click), 
+    .posMX(posMX), 
+    .posMY(posMY)
+    );
+
+mouse_val cardSel (
+    .Click(Click), 
+    .Mouse_x(posMX), 
+    .Mouse_y(posMY), 
+    .card1(posA), 
+    .card2(posB), 
+    .card3(posC), 
+    .card4(posD), 
+    .card5(posE), 
+    .card6(posF), 
+    .card7(posG), 
+    .card8(posH), 
+    .card9(posI), 
+    .card10(posJ), 
+    .card11(posK), 
+    .card12(posL), 
+    .card13(posM), 
+    .card14(posN), 
+    .card15(posO), 
+    .card16(posP), 
+    .card(card)
+    );
+
+MemoryFSM fsm (
 	.clk(PixelCLK),
+	.rst(rst),
+	.value(card),
+	.selNum(selNum),
+	.cardreg(regCard)
+	);
+
+VGA_Controller vga_sync (
+	.clk(PixelCLK), 
 	.rst(rst),
 	.HCount(HCount),
 	.VCount(VCount),
-	.HSync(HSync),
+	.HSync(HSync), 
 	.VSync(VSync)
 );
 
@@ -67,11 +138,13 @@ DrawSystem draw (
 	.posN(posN),
 	.posO(posO),
 	.posP(posP),
+	.posMX(posMX),
+	.posMY(posMY),
+	.numSel(selNum),
 	.rgb(rgb)
 	);
 
 always @(posedge PixelCLK) begin
-	regCard <= 0;
 	posA <= 3;
 	posB <= 15;
 	posC <= 4;

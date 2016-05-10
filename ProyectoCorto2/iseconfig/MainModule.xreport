@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-02T14:03:44</DateModified>
+  <DateModified>2016-05-10T09:56:06</DateModified>
   <ModuleName>MainModule</ModuleName>
-  <SummaryTimeStamp>2016-05-02T07:26:02</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-05-09T22:23:36</SummaryTimeStamp>
   <SavedFilePath>C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/iseconfig/MainModule.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2\</ImplementationReportsDirectory>
   <DateInitialized>2016-04-14T11:43:40</DateInitialized>
@@ -44,7 +44,7 @@
    <view program="pn" WrapMessages="true" contextTags="EDK_OFF" type="MessageList" hideColumns="Filtered, New" file="_xmsgs/pn_parser.xmsgs" label="Parser Messages" />
    <view program="xst" WrapMessages="true" contextTags="XST_ONLY,EDK_OFF" hidden="false" type="MessageList" hideColumns="Filtered" file="_xmsgs/xst.xmsgs" label="Synthesis Messages" />
    <view inputState="Synthesized" program="ngdbuild" WrapMessages="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/ngdbuild.xmsgs" label="Translation Messages" />
-   <view inputState="Translated" program="map" WrapMessages="true" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/map.xmsgs" label="Map Messages" />
+   <view inputState="Translated" program="map" WrapMessages="true" contextTags="FPGA_ONLY" showInfos="1" type="MessageList" hideColumns="Filtered" file="_xmsgs/map.xmsgs" label="Map Messages" showWarnings="1" />
    <view inputState="Mapped" program="par" WrapMessages="true" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/par.xmsgs" label="Place and Route Messages" />
    <view inputState="Routed" program="trce" WrapMessages="true" contextTags="FPGA_ONLY" type="MessageList" hideColumns="Filtered" file="_xmsgs/trce.xmsgs" label="Timing Messages" />
    <view inputState="Routed" program="xpwr" WrapMessages="true" contextTags="EDK_OFF" hidden="true" type="MessageList" hideColumns="Filtered" file="_xmsgs/xpwr.xmsgs" label="Power Messages" />

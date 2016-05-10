@@ -22,84 +22,146 @@ module MemoryFSM(
     input clk,
     input rst,
     input [4:0] value,
+	 output reg [3:0] selNum,
     output reg [15:0] cardreg
     );
 
 reg [1:0] nextstate, state;
-reg [4:0] cardA, cardB;
-reg [15:0] counter;
+reg [3:0] cardA, cardB;
+reg [27:0] counter;
 
-always @(state, posedge clk)
+always @(posedge clk)
 begin
 	case(state)
-		
 		2'b00: begin
-			cardA <= value - 1;
-			cardreg[cardA] <= 1;
-			if(value == 0)
-				nextstate <= 2'b00;
-			else if(cardA != 5'b10000)
-				nextstate <= 2'b01;
-			else
-				nextstate <= 2'b00;
+		
+			cardA = value - 1;
+						
+			if(value == 0) begin
+				cardreg[cardA] = 0;
+				nextstate = 2'b00;
+			end
+			else if (cardreg[cardA] == 1) begin
+				nextstate = 2'b00;
+			end
+			else begin
+				cardreg[cardA] = 1;
+				nextstate = 2'b01;
+			end
 			end
 		2'b01:begin
-			cardB <= value - 1;
-			cardreg[cardB] <= 1;
-			if (value == 0)
-				nextstate <= 2'b01;
-			else if(cardB != 5'b10000)
-				nextstate <= 2'b10;
-			else
-				nextstate <= 2'b01;
+		
+			cardB = value - 1;
+				
+			if (value == 0) begin
+				cardreg[cardB] = 0;
+				nextstate = 2'b01;
+			end
+			else if (cardA == cardB) begin
+				nextstate = 2'b01;
+			end
+			else if (cardreg[cardB] == 1) begin
+				nextstate = 2'b01;
+			end
+			else begin
+				cardreg[cardB] = 1;
+				nextstate = 2'b10;
+				end
 			end
 		2'b10:begin
-			if(cardA == 5'b00000 && cardB == 5'b00001)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b00010 && cardB == 5'b00011)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b00100 && cardB == 5'b00101)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b00110 && cardB == 5'b00111)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b01000 && cardB == 5'b01001)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b01010 && cardB == 5'b01011)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b01100 && cardB == 5'b01101)
-				nextstate <= 2'b11;
-			else if(cardA == 5'b01110 && cardB == 5'b01111)
-				nextstate <= 2'b11;
+			if(cardA == 4'b0000 && cardB == 4'b0001) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0010 && cardB == 4'b0011) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0100 && cardB == 4'b0101) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0110 && cardB == 4'b0111) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1000 && cardB == 4'b1001) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1010 && cardB == 4'b1011) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1100 && cardB == 4'b1101) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1110 && cardB == 4'b1111) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0001 && cardB == 4'b0000) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0011 && cardB == 4'b0010) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0101 && cardB == 4'b0100) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b0111 && cardB == 4'b0110) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1001 && cardB == 4'b1000) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1011 && cardB == 4'b1010) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1101 && cardB == 4'b1100) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
+			else if(cardA == 4'b1111 && cardB == 4'b1110) begin
+				nextstate = 2'b00;
+				selNum = selNum + 1;
+			end
 			else begin
-				cardreg[cardA] = 0; 
-				cardreg[cardB] = 0; 
-				nextstate <= 2'b00;
+				nextstate = 2'b11;
 				end
 			end
 		2'b11:begin
-			counter <= counter + 1;
-			if(counter != 5)
-				nextstate <= 2'b11;
+			counter = counter + 1;
+			if(counter != 28'h2faf080)
+				nextstate = 2'b11;
 			else begin
-				cardA <= 5'b10000; cardB <= 5'b10000;
-				counter <= 0;
-				nextstate <= 2'b00;
+				cardreg[cardA] = 0; 
+				cardreg[cardB] = 0;
+				counter = 0;
+				nextstate = 2'b00;
 				end
 			end
-		default: nextstate <= 2'b00;
+		default: begin nextstate = 2'b00;
+							cardreg = 0;
+							counter = 0;
+					end
 	endcase	
 end
 
 always @(posedge clk)
 begin
 	if(rst) begin
-		cardreg <= 0;
-		cardA <= 5'b10000; cardB <= 5'b10000;
-		counter = 0;
-		nextstate <= 2'b00;
+		state = 2'b00;
 		end
 	else
-		state <= nextstate;
+		state = nextstate;
 end
 
 endmodule

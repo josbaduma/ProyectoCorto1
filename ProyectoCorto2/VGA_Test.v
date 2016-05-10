@@ -29,6 +29,7 @@ module VGA_Test;
 	reg rst;
 
 	// Outputs
+	wire [9:0] HCount, VCount;
 	wire HSync;
 	wire VSync;
 
@@ -36,6 +37,8 @@ module VGA_Test;
 	VGA_Controller uut (
 		.clk(clk), 
 		.rst(rst), 
+		.HCount(HCount),
+		.VCount(VCount),
 		.HSync(HSync), 
 		.VSync(VSync)
 	);

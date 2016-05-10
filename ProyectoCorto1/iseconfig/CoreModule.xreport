@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-26T20:33:12</DateModified>
+  <DateModified>2016-05-10T09:55:50</DateModified>
   <ModuleName>CoreModule</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1/iseconfig/CoreModule.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto1/iseconfig/CoreModule.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto1\</ImplementationReportsDirectory>
   <DateInitialized>2016-03-31T14:56:49</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

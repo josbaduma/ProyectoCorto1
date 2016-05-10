@@ -1,8 +1,0 @@
-verilog work "ROM_CardA.v"
-verilog work "CardA.v"
-verilog work "DrawSystem.v"
-verilog work "VGA_Controller.v"
-verilog work "FreqDivisor.v"
-verilog work "MainModule.v"
-verilog work "Main_Test.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -27,18 +27,16 @@ module CardI(
     output reg [2:0] rgb
     );
 	 
-localparam width = 83;
-localparam height = 83;
+localparam width = 90;
+localparam height = 90;
 
 reg [9:0] pos_x_l, pos_x_r;
 reg [9:0] pos_y_t, pos_y_b;
-
-assign card_sq = ((pos_x_l <= HCount) && (HCount <= pos_x_r) &&
-						(pos_y_t <= VCount) && (VCount <= pos_y_b));
+reg card_sq;
 
 wire [6:0] addr;
 wire [9:0] col;
-wire [248:0] data;
+wire [269:0] data;
 
 ROM_CardE card (
 	.addr(addr),
@@ -109,7 +107,14 @@ end
 
 always @*
 begin
-	if( card_sq )begin
+	card_sq <= ((pos_x_l <= HCount) && (HCount <= pos_x_r) &&
+	  			  (pos_y_t <= VCount) && (VCount <= pos_y_b));
+
+	if( enable == 0 && card_sq == 1) begin
+		rgb <= 3'b100;
+		cardon <= 1;
+	end
+	else if( enable == 1 && card_sq == 1 )begin
 		rgb[0] <= data[col];
 		rgb[1] <= data[col+1];
 		rgb[2] <= data[col+2];

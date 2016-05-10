@@ -36,7 +36,7 @@ module FSM_test;
 	MemoryFSM uut (
 		.clk(clk), 
 		.rst(rst), 
-		.value(value), 
+		.value(value),
 		.cardreg(cardreg)
 	);
 
@@ -47,25 +47,25 @@ module FSM_test;
 		value = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#10;
         
 		// Add stimulus here
 		@(posedge clk)
 			#20; rst = 1;
 		@(posedge clk);
-			#20; rst = 0;
+			#20; rst = 0; #20;
 		@(posedge clk)
-			#20; value = 13;
+			value = 13; #100;
 		@(posedge clk)
-			#20; value = 14;
+			value = 14; #100;
 		@(posedge clk)
-			value = 0; #240; 
-		@(posedge clk);
-			#20; value = 5;
+			value = 0; #600;
 		@(posedge clk)
-			#20; value = 8;
+			value = 2; #100;
 		@(posedge clk)
-			value = 0;
+			value = 9; #100;
+		@(posedge clk)
+			value = 0; #600;
 	end
 	
 	always begin

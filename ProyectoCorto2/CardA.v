@@ -27,18 +27,16 @@ module CardA(
     output reg [2:0] rgb
     );
 	 
-localparam width = 83;
-localparam height = 83;
+localparam width = 90;
+localparam height = 90;
 
 reg [9:0] pos_x_l, pos_x_r;
 reg [9:0] pos_y_t, pos_y_b;
 
 wire [6:0] addr;
 wire [9:0] col;
-wire [248:0] data;
+wire [269:0] data;
 reg card_sq;
-//assign card_sq = ((pos_x_l <= HCount) && (HCount <= pos_x_r) &&
-//						(pos_y_t <= VCount) && (VCount <= pos_y_b));
 
 ROM_CardA card (
 	.addr(addr),

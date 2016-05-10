@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   09:55:58 05/01/2016
+// Create Date:   06:19:59 05/03/2016
 // Design Name:   MainModule
 // Module Name:   C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Main_Test.v
 // Project Name:  ProyectoCorto2
@@ -27,16 +27,18 @@ module Main_Test;
 	// Inputs
 	reg clk;
 	reg rst;
+	reg [4:0] value;
 
 	// Outputs
 	wire HSync;
 	wire VSync;
-	wire [8:0] rgb;
+	wire [2:0] rgb;
 
 	// Instantiate the Unit Under Test (UUT)
 	MainModule uut (
 		.clk(clk), 
 		.rst(rst), 
+		.value(value), 
 		.HSync(HSync), 
 		.VSync(VSync), 
 		.rgb(rgb)
@@ -46,12 +48,20 @@ module Main_Test;
 		// Initialize Inputs
 		clk = 0;
 		rst = 0;
+		value = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-
+		@(posedge clk)
+			rst = 1; #5;
+		@(posedge clk)
+		   rst = 0; #5;
+		@(posedge clk)
+			value = 6; #60;
+		@(posedge clk)
+			value = 7; #60;
 	end
 	
 	always begin

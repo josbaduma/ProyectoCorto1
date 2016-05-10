@@ -23,13 +23,14 @@ module DrawSystem(
     input [9:0] VCount,
 	 input [15:0] regCard,
 	 input [3:0] posA, posB, posC, posD, posE, posF, posG, posH, posI, posJ, posK, posL, posM, posN, posO, posP,
-    output reg [16:0] selRGB,
+	 input [9:0] posMX, posMY,
+	 input [3:0] numSel,
 	 output reg [2:0] rgb
     );
 
-//reg [16:0] selRGB;
-wire cardAon, cardBon, cardCon,cardDon, cardEon, cardFon, cardGon,cardHon, cardIon, cardJon, cardKon,cardLon, cardMon, cardNon, cardOon, cardPon, titleon;
-wire [2:0] rgbA, rgbB, rgbC, rgbD, rgbE, rgbF, rgbG, rgbH, rgbI, rgbJ, rgbK, rgbL, rgbM, rgbN, rgbO, rgbP, rgbtitle, rgbnext;
+reg [19:0] selRGB;
+wire cardAon, cardBon, cardCon,cardDon, cardEon, cardFon, cardGon,cardHon, cardIon, cardJon, cardKon,cardLon, cardMon, cardNon, cardOon, cardPon, titleon, mouseon, numeroon, texton;
+wire [2:0] rgbA, rgbB, rgbC, rgbD, rgbE, rgbF, rgbG, rgbH, rgbI, rgbJ, rgbK, rgbL, rgbM, rgbN, rgbO, rgbP, rgbtitle, rgbmouse, rgbnum, rgbtext, rgbnext;
 
 CardA carda (
 	.enable(regCard[0]),
@@ -182,6 +183,30 @@ TitleText title (
 	.rgb(rgbtitle)
 	);
 	
+MouseRGB mouse (
+	.posMX(posMX),
+	.posMY(posMY),
+	.HCount(HCount),
+	.VCount(VCount),
+	.mouseon(mouseon),
+	.rgbmouse(rgbmouse)
+	);
+
+NumeroParejas num (
+	.HCount(HCount),
+	.VCount(VCount),
+	.numSel(numSel),
+	.numeroon(numeroon),
+	.rgbnum(rgbnum)
+	);
+
+TextParejas text (
+	.HCount(HCount),
+	.VCount(VCount),
+	.texton(texton),
+	.rgbtext(rgbtext)
+	);
+	
 MUX_RGB mux (
 	.rgbA(rgbA),
 	.rgbB(rgbB),
@@ -200,6 +225,9 @@ MUX_RGB mux (
 	.rgbO(rgbO),
 	.rgbP(rgbP),
 	.rgbtitle(rgbtitle),
+	.rgbmouse(rgbmouse),
+	.rgbnum(rgbnum),
+	.rgbtext(rgbtext),
 	.selRGB(selRGB),
 	.rgbnext(rgbnext)
 	);
@@ -223,6 +251,9 @@ begin
 	selRGB[14] <= cardOon;
 	selRGB[15] <= cardPon;
 	selRGB[16] <= titleon;
+	selRGB[17] <= mouseon;
+	selRGB[18] <= numeroon;
+	selRGB[19] <= texton;
 	rgb <= rgbnext;
 end
 

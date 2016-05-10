@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ProyectoCorto2 -o C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/pos_generator.tfi -lib work C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2//pos_generator.v -module pos_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

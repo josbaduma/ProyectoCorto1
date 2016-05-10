@@ -8,6 +8,9 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Antirrebotes.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/CardA.v&quot; into library work</arg>
 </msg>
 
@@ -59,6 +62,9 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/DrawSystem.v&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Filtro.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/FreqDivisor.v&quot; into library work</arg>
 </msg>
 
@@ -69,6 +75,21 @@
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MemoryFSM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MouseAlt.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MousePos.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MouseRGB.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Mouse_Alt.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/NumeroParejas.v&quot; into library work</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/ROM_CardA.v&quot; into library work</arg>
@@ -95,13 +116,34 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/ROM_CardH.v&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/ROM_Numero.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/ROM_Text.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/ROM_Title.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/Temporizador.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/TextParejas.v&quot; into library work</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/TitleText.v&quot; into library work</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/VGA_Controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/conversor_A_Mouse.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/mouse_val.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/pos_generator.v&quot; into library work</arg>
 </msg>
 
 </messages>

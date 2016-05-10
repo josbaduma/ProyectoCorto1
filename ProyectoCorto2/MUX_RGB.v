@@ -36,32 +36,38 @@ module MUX_RGB(
 	 input [2:0] rgbO,
 	 input [2:0] rgbP,
 	 input [2:0] rgbtitle,
-    input [16:0] selRGB,
+	 input [2:0] rgbmouse,
+	 input [2:0] rgbnum,
+	 input [2:0] rgbtext,
+    input [19:0] selRGB,
     output reg [2:0] rgbnext
     );
 
 always @*
 begin
 	case(selRGB)
-		17'b00000000000000000: rgbnext <= 3'b0;
-		17'b00000000000000001: rgbnext <= rgbA;
-		17'b00000000000000010: rgbnext <= rgbB;
-		17'b00000000000000100: rgbnext <= rgbC;
-		17'b00000000000001000: rgbnext <= rgbD;
-		17'b00000000000010000: rgbnext <= rgbE;
-		17'b00000000000100000: rgbnext <= rgbF;
-		17'b00000000001000000: rgbnext <= rgbG;
-		17'b00000000010000000: rgbnext <= rgbH;
-		17'b00000000100000000: rgbnext <= rgbI;
-		17'b00000001000000000: rgbnext <= rgbJ;
-		17'b00000010000000000: rgbnext <= rgbK;
-		17'b00000100000000000: rgbnext <= rgbL;
-		17'b00001000000000000: rgbnext <= rgbM;
-		17'b00010000000000000: rgbnext <= rgbN;
-		17'b00100000000000000: rgbnext <= rgbO;
-		17'b01000000000000000: rgbnext <= rgbP;
-		17'b10000000000000000: rgbnext <= rgbtitle;
-		default: rgbnext <= 3'b0;
+		20'b00000000000000000000: rgbnext <= 8'b0;
+		20'b00000000000000000001: rgbnext <= rgbA;
+		20'b00000000000000000010: rgbnext <= rgbB;
+		20'b00000000000000000100: rgbnext <= rgbC;
+		20'b00000000000000001000: rgbnext <= rgbD;
+		20'b00000000000000010000: rgbnext <= rgbE;
+		20'b00000000000000100000: rgbnext <= rgbF;
+		20'b00000000000001000000: rgbnext <= rgbG;
+		20'b00000000000010000000: rgbnext <= rgbH;
+		20'b00000000000100000000: rgbnext <= rgbI;
+		20'b00000000001000000000: rgbnext <= rgbJ;
+		20'b00000000010000000000: rgbnext <= rgbK;
+		20'b00000000100000000000: rgbnext <= rgbL;
+		20'b00000001000000000000: rgbnext <= rgbM;
+		20'b00000010000000000000: rgbnext <= rgbN;
+		20'b00000100000000000000: rgbnext <= rgbO;
+		20'b00001000000000000000: rgbnext <= rgbP;
+		20'b00010000000000000000: rgbnext <= rgbtitle;
+		20'b00100000000000000000: rgbnext <= rgbmouse;
+		20'b01000000000000000000: rgbnext <= rgbnum;
+		20'b10000000000000000000: rgbnext<= rgbtext;
+		default: rgbnext <= 8'b0;
 	endcase
 end
 

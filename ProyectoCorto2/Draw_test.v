@@ -103,15 +103,16 @@ module Draw_test;
 			#5; HCount <= 140;
 				 VCount <= 75;
 				 regCard <= 1;
-			#50; HCount <= 231;
-				  VCount <= 71;
-				  regCard <= 1;
 			#50; HCount <= 140;
+				  VCount <= 75;
+				  regCard <= 0;
+			
+			#50; HCount <= 240;
+				  VCount <= 75;
+				  regCard <= 2;
+			#50; HCount <= 240;
 				 VCount <= 75;
 				 regCard <= 0;
-			#50; HCount <= 231;
-				  VCount <= 71;
-				  regCard <= 0;
 	end
       
 endmodule

@@ -1,4 +1,0 @@
-verilog isim_temp "pos_generator.v"
-verilog isim_temp "Find_pos.v"
-verilog isim_temp "rand_main.v"
-verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
