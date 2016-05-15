@@ -22,6 +22,7 @@
          <ClosedNode>/CardN C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardN.v</ClosedNode>
          <ClosedNode>/CardO C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardO.v</ClosedNode>
          <ClosedNode>/CardP C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|CardP.v</ClosedNode>
+         <ClosedNode>/MainModule C:|Users|AndresMaria|Documents|Taller en Sistemas Digitales|Taller-Digital|ProyectoCorto2|MainModule.v/mouse - MouseAlt</ClosedNode>
          <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v</ClosedNode>
          <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem</ClosedNode>
          <ClosedNode>/MainModule C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|MainModule.v/draw - DrawSystem/carda - CardA</ClosedNode>
@@ -81,13 +82,13 @@
          <ClosedNode>/NumeroParejas C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoCorto2|NumeroParejas.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MainModule (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MainModule.v)</SelectedItem>
+         <SelectedItem>cardSel - mouse_val (C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto2/mouse_val.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000f0000000020000000000000000000000000200000064ffffffff000000810000000300000002000000f00000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000150000000020000000000000000000000000200000064ffffffff000000810000000300000002000001500000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>MainModule (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoCorto2/MainModule.v)</CurrentItem>
+      <CurrentItem>cardSel - mouse_val (C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ProyectoCorto2/mouse_val.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -143,7 +144,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e20000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
