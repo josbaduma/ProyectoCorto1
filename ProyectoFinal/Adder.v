@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    23:26:33 05/11/2016 
+// Create Date:    20:43:14 05/12/2016 
 // Design Name: 
-// Module Name:    InstructionMemory 
+// Module Name:    Adder 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,17 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module InstructionMemory(
-    input [31:0] ADDR,
-    output reg [31:0] RD
+module Adder(
+    input [31:0] DI1,
+    input [31:0] DI2,
+    output reg [31:0] DO
     );
 
-always @*
-	case(ADDR)
-		0: RD = 32'h020081E0;
-		4: RD = 32'h021044E0;
-		8: RD = 32'h014003E0;
-		default: RD = 32'b0;
-	endcase
-	
+always @* begin
+	DO <= DI1 + DI2;
+end
+
 endmodule

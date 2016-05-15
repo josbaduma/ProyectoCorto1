@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    23:26:33 05/11/2016 
+// Create Date:    18:47:35 05/12/2016 
 // Design Name: 
-// Module Name:    InstructionMemory 
+// Module Name:    MUX 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,17 +18,18 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module InstructionMemory(
-    input [31:0] ADDR,
-    output reg [31:0] RD
+module MUX(
+    input [31:0] DI1,
+    input [31:0] DI2,
+    input SelData,
+    output reg [31:0] DO
     );
 
-always @*
-	case(ADDR)
-		0: RD = 32'h020081E0;
-		4: RD = 32'h021044E0;
-		8: RD = 32'h014003E0;
-		default: RD = 32'b0;
+always @* begin
+	case(SelData)
+		0: DO <= DI1;
+		1: DO <= DI2;
 	endcase
-	
+end
+
 endmodule

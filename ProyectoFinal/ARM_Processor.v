@@ -22,7 +22,11 @@ module ARM_Processor(
 	 input clk
     );
 	 
-wire [31:0] PC, ExtImm, RD;
+wire [31:0] PC, REG, ExtImm, PCin, PC4, PC8, RT, RS, RD;
+reg [3:0] rs, rd, rt, mux1, mux2;
+
+
+MUX muxpc ();
 
 ProgramCounter pc (
 	 .clk(clk),
@@ -30,25 +34,41 @@ ProgramCounter pc (
 	 .out(PC)
 	 );
 
+Adder add1 (
+    .DI1(PC), 
+    .DI2(4), 
+    .DO(PC4)
+    );
+
+MUX muxrs ();
+MUX muxrt ();
+
 InstructionMemory insructions (
     .ADDR(PC), 
-    .RD(RD)
+    .RD(REG)
     );
+
+Adder add2 (
+    .DI1(PC4), 
+    .DI2(4), 
+    .DO(PC8)
+    );
+
 
 Registers regbank (
 	 .clk(clk), 
     .WE3(WE3), 
-    .ADDR1(RD[19:16]), 
-    .ADDR2(ADDR2), 
-    .ADDR3(ADDR3), 
+    .ADDR1(rs), 
+    .ADDR2(rt), 
+    .ADDR3(rd), 
     .WD3(WD3), 
-    .RD1(RD1), 
-    .RD2(RD2), 
-    .R15(P15)
+    .RD1(RS), 
+    .RD2(RT), 
+    .R15(PC8)
 	 );
 
 ExtendImm imm (
-	 .Immediate(RD[11:0]),
+	 .Immediate(Immediate),
 	 .ExtImm(ExtImm)
 	 );
 
