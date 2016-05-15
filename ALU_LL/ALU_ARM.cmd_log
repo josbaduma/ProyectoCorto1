@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ALU_LL/ALU_ARM.xst" -ofn "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ALU_LL/ALU_ARM.syr" 
+xst -intstyle ise -ifn "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ALU_LL/ALU_ARM.xst" -ofn "C:/Users/AndresMaria/Documents/Taller en Sistemas Digitales/Taller-Digital/ALU_LL/ALU_ARM.syr" 

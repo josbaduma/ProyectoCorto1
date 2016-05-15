@@ -1,0 +1,7 @@
+verilog work "OR.v"
+verilog work "Neg.v"
+verilog work "Dec_Sub.v"
+verilog work "Deco.v"
+verilog work "AND.v"
+verilog work "Adder.v"
+verilog work "ALU_ARM.v"

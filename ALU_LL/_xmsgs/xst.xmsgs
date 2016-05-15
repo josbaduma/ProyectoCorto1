@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="604" delta="old" >"C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Taller-Digital\ALU_LL\ALU_ARM.v" Line 37: Module instantiation should have an instance name
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="604" delta="old" >"C:\Users\AndresMaria\Documents\Taller en Sistemas Digitales\Taller-Digital\ALU_LL\ALU_ARM.v" Line 40: Module instantiation should have an instance name
+</msg>
+
+</messages>
+

@@ -34,20 +34,20 @@ wire Cout, nAlC, xorAS, xnorAlcAB,nr31,nr312;
 //code
 Neg neg(B,nB);
 Dec_Sub decS(ALUControl[0],B,nB,selB);	 
-Adder(A,selB,Sum,Cout);
+Adder adder(A,selB,Sum,Cout);
 AND and32(A,B,AND);
 OR or32(A,B,OR);
-Deco(Sum,Sum,AND,OR,ALUControl,Result);
+Deco dec(Sum,Sum,AND,OR,ALUControl,Result);
 //not n1(Result[31],Zero);///ojo
-not n2(ALUControl[1], nAlC);
-and a1(nAlC,Cout,Carry);
-xor x1(Sum[31], A[31],xorAS);
-xnor xn1(ALUControl[0],A[31],B[31], xnorAlcAB);
-and a2(xorAS,xnorAlcAB,nAlC,Overflow);
-not n3(Result[31], nr31);
-not n4(nr31, Negative);
-not n5(Result[31], nr312);
-and(nr312,Zero)
+not n2(nAlC,ALUControl[1]);
+and a1(Carry,nAlC,Cout);
+xor x1(xorAS,Sum[31], A[31]);
+xnor xn1(xnorAlcAB, ALUControl[0],A[31],B[31]);
+and a2(Overflow,xorAS,xnorAlcAB,nAlC);
+not n3(nr31,Result[31]);
+not n4(Negative,nr31);
+not n5(nr312,Result[31]);
+and(Zero,nr312);
 //assign Negative = Result[31];
 //assign Zero = (Result == 0)? 1'b1;
 endmodule
