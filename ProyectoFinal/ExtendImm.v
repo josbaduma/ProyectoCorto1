@@ -19,13 +19,27 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ExtendImm(
-    input [11:0] Immediate,
+	 input [1:0] CondExtend,
+    input [23:0] Immediate,
     output reg [31:0] ExtImm
     );
 
 always @* begin
-	ExtImm[31:12] <= 20'b0;
-	ExtImm[11:0] <= Immediate;
+	case(CondExtend)
+	2'b00: begin
+		ExtImm[31:8] <= 20'b0;
+		ExtImm[7:0] <= Immediate[7:0];
+	end	
+	2'b01: begin
+		ExtImm[31:12] <= 20'b0;
+		ExtImm[11:0] <= Immediate[11:0];
+	end
+	2'b10: begin
+		ExtImm[31:24] <= Immediate[23];
+		ExtImm[23:0] <= (Immediate[23:0] * 4);
+	end
+	
+	endcase
 end
 
 endmodule

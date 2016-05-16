@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:44:12 05/14/2016 
+// Create Date:    18:54:59 05/14/2016 
 // Design Name: 
-// Module Name:    Adder 
+// Module Name:    Deco 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Adder(
-    input[31:0] A,
-    input[31:0] B,
-    output[31:0] Sum,
-    output Cout
+module Deco(
+    input[31:0] ADD,
+    input[31:0] SUB, 
+    input[31:0] AND,
+    input[31:0] OR,
+    input[1:0] ALUControl,
+    output[31:0] Result
     );
+assign Result = (ALUControl == 0)? ADD:
+               (ALUControl == 1)? SUB:
+					(ALUControl == 2)? AND:OR;
 
-assign {Cout,Sum} = A + B;
+
 endmodule

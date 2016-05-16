@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:44:12 05/14/2016 
+// Create Date:    15:46:03 05/16/2016 
 // Design Name: 
-// Module Name:    Adder 
+// Module Name:    ConditionalLogic 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Adder(
-    input[31:0] A,
-    input[31:0] B,
-    output[31:0] Sum,
-    output Cout
+module ConditionalLogic(
+    input PCs,
+    input RegW,
+    input MemW,
+    input [1:0] FlagW,
+    input [3:0] Cond,
+    input [3:0] ALUFlags,
+    output PCSrc,
+    output RegWrite,
+    output MemWrite
     );
 
-assign {Cout,Sum} = A + B;
+
 endmodule

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:44:12 05/14/2016 
+// Create Date:    18:17:41 05/14/2016 
 // Design Name: 
-// Module Name:    Adder 
+// Module Name:    OR 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Adder(
+module OR(
     input[31:0] A,
     input[31:0] B,
-    output[31:0] Sum,
-    output Cout
+    output[31:0] C
     );
 
-assign {Cout,Sum} = A + B;
+assign C = A | B;
+ 
 endmodule

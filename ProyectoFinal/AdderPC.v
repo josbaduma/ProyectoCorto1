@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:44:12 05/14/2016 
+// Create Date:    18:24:42 05/15/2016 
 // Design Name: 
-// Module Name:    Adder 
+// Module Name:    AdderPC 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Adder(
-    input[31:0] A,
-    input[31:0] B,
-    output[31:0] Sum,
-    output Cout
+module AdderPC(
+    input [31:0] DI1,
+    input [31:0] DI2,
+    output reg [31:0] DO
     );
 
-assign {Cout,Sum} = A + B;
+always @* begin
+	DO = DI1 + DI2;
+end
+
 endmodule

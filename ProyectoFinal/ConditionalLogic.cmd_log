@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ProyectoFinal -o C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ConditionalLogic.tfi -lib work C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal//ConditionalLogic.v -module ConditionalLogic -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

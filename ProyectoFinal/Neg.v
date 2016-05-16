@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:44:12 05/14/2016 
+// Create Date:    17:52:39 05/14/2016 
 // Design Name: 
-// Module Name:    Adder 
+// Module Name:    Neg 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Adder(
-    input[31:0] A,
-    input[31:0] B,
-    output[31:0] Sum,
-    output Cout
+module Neg(
+    input[31:0] A0,
+    output[31:0]A
     );
+	 
+assign A = (~ A0) + 1;
 
-assign {Cout,Sum} = A + B;
 endmodule
