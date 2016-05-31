@@ -1,3 +1,0 @@
-vhdtdtfi -lib work C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ARM_Processor.v -lang verilog -prj ProyectoFinal -o ARM_Processor.spl -module ARM_Processor -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 ARM_Processor.spl C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ARM_Processor.sym 
-vhdtdtfi -lang verilog -prj ProyectoFinal -o C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ARM_Processor.tfi -lib work C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal//ARM_Processor.v -module ARM_Processor -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

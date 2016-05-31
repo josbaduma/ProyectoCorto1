@@ -32,14 +32,16 @@ module Registers(
 
 reg [31:0] RegBank [15:0];
 
-always @(posedge clk) begin
+always begin
+	RD1 <= RegBank[ADDR1];
+	RD2 <= RegBank[ADDR2];
+end
+
+always @(negedge clk) begin
 	RegBank[15] <= R15;
 	
 	if(WD3)
 		RegBank[ADDR3] <= WD3;
-	else begin
-		RD1 <= RegBank[ADDR1];
-		RD2 <= RegBank[ADDR2];
-	end
 end
+
 endmodule

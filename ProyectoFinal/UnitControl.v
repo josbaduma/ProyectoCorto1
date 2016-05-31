@@ -19,6 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module UnitControl(
+	 input clk,
     input [3:0] Cond,
     input [1:0] OP,
     input [5:0] Funct,
@@ -57,6 +58,7 @@ Decoder deco (
 	 );
 
 ConditionalLogic condlogic (
+	 .clk(clk),
     .PCs(PCs), 
     .RegW(RegW), 
     .MemW(MemW), 

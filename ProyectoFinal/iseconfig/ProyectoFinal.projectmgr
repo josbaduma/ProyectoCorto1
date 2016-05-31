@@ -9,15 +9,17 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/ALU_ARM C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ALU_ARM.v</ClosedNode>
          <ClosedNode>/ARM_Processor C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ARM_Processor.v/alu - ALU_ARM</ClosedNode>
+         <ClosedNode>/ARM_Processor C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ARM_Processor.v/control - UnitControl</ClosedNode>
+         <ClosedNode>/UnitControl C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|UnitControl.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>imm - ExtendImm (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ExtendImm.v)</SelectedItem>
+         <SelectedItem>ARM_Processor (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ARM_Processor.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>imm - ExtendImm (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ExtendImm.v)</CurrentItem>
+      <CurrentItem>ARM_Processor (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ARM_Processor.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -25,13 +27,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -63,16 +65,17 @@
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Synthesize - XST</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
       <ClosedNodes>
@@ -89,22 +92,27 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/ALU_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ALU_Test.v</ClosedNode>
+         <ClosedNode>/ALU_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ALU_Test.v/uut - ALU_ARM</ClosedNode>
          <ClosedNode>/ARM_Processor C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ARM_Processor.v</ClosedNode>
+         <ClosedNode>/CondTest C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|CondTest.v</ClosedNode>
          <ClosedNode>/ImmTest C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|ImmTest.v</ClosedNode>
          <ClosedNode>/InstructionTest C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|InstructionTest.v</ClosedNode>
          <ClosedNode>/MUXTest C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|MUXTest.v</ClosedNode>
          <ClosedNode>/MemoryTest C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|MemoryTest.v</ClosedNode>
          <ClosedNode>/PC_Test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|PC_Test.v</ClosedNode>
          <ClosedNode>/RegisterTest C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|RegisterTest.v</ClosedNode>
+         <ClosedNode>/UControl_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|UControl_test.v/uut - UnitControl/condlogic - ConditionalLogic</ClosedNode>
+         <ClosedNode>/UnitControl C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|UnitControl.v</ClosedNode>
+         <ClosedNode>/deco_test C:|Users|joseb|Documents|GitHub|Taller-Digital|ProyectoFinal|deco_test.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ALU_Test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ALU_Test.v)</SelectedItem>
+         <SelectedItem>UControl_test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/UControl_test.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000fc000000020000000000000000000000000200000064ffffffff000000810000000300000002000000fc0000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ALU_Test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/ALU_Test.v)</CurrentItem>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000176000000020000000000000000000000000200000064ffffffff000000810000000300000002000001760000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>UControl_test (C:/Users/joseb/Documents/GitHub/Taller-Digital/ProyectoFinal/UControl_test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -112,13 +120,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -132,5 +140,16 @@
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" />
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
    </ItemView>
 </Project>

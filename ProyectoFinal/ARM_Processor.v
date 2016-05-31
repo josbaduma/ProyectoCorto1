@@ -26,14 +26,35 @@ localparam addpc = 32'h4;
 localparam const = 4'd15;
 	 
 wire [31:0] PC, REG, ExtImm, PCin, PC4, PC8, RT, SrcA, SrcB, ALUResult, ReadData, Result;
-wire PCSrc, RegSrcA, RegSrcB, RegWrite,  ALUSrc,  MemWrite, MemtoReg; 
+wire PCSrc, RegWrite,  ALUSrc,  MemWrite, MemtoReg; 
 wire Zero, Negative, Carry, Overflow;
-wire [1:0] ImmmSrc, ALUControl;
+wire [1:0] ImmmSrc, ALUControl, RegSrc;
 reg [11:0] Immediate;
 reg [3:0] rs, rd, rt;
+reg [3:0] Cond;
+reg [1:0] OP;
+reg [5:0] Funct;
 wire [3:0] RA1, RA2;
 
-
+UnitControl control (
+	 .clk(clk), 
+    .Cond(Cond), 
+    .OP(OP), 
+    .Funct(Funct), 
+    .RD(rd), 
+    .Zero(Zero), 
+    .Negative(Negative), 
+    .Carry(Carry), 
+    .Overflow(Overflow), 
+    .PCSrc(PCSrc), 
+    .MemtoReg(MemtoReg), 
+    .MemWrite(MemWrite), 
+    .ALUSrc(ALUSrc), 
+    .RegWrite(RegWrite), 
+    .RegSrc(RegSrc), 
+    .ImmSrc(ImmSrc), 
+    .ALUControl(ALUControl)
+	 );
 MUX muxpc (
 	 .DI1(PC4), 
     .DI2(Result), 
@@ -64,16 +85,16 @@ AdderPC add2 (
     .DO(PC8)
     );
 
-MUX muxra1 ( 
-	 .DI1(rs), 
-    .DI2(const), 
-    .SelData(RegSrcA), 
+MUX_REG muxra1 ( 
+	 .DI0(rs), 
+    .DI1(const), 
+    .SelData(RegSrc[1]), 
     .DO(RA1));
 	 
-MUX muxra2 (
-	 .DI1(rt), 
-    .DI2(rd), 
-    .SelData(RegSrcB), 
+MUX_REG muxra2 (
+	 .DI0(rt), 
+    .DI1(rd), 
+    .SelData(RegSrc[0]), 
     .DO(RA2));
 
 Registers regbank (
@@ -125,10 +146,13 @@ MUX muxresult (
     .SelData(MemtoReg), 
     .DO(Result));
 
-always @* begin
+always begin
+	Cond <= REG[31:28];
+	OP <= REG[27:26];
+	Funct <= REG[25:20];
 	rs <= REG[19:16];
-	rt <= REG[3:0];
 	rd <= REG[15:12];
+	rt <= REG[3:0];
 	Immediate <= REG[23:0];
 end
 
